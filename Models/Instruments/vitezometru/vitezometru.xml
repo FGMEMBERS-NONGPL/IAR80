@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<!--
+1 ft  =  0.3048 m
+1 m = 3.2808399 ft
+-->
+
+<PropertyList>
+  <path>vitezometru.ac</path>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>0</dep></entry>
+      <entry><ind>53.99568</ind><dep>21.5</dep></entry>
+      <entry><ind>107.99136</ind><dep>71</dep></entry>
+      <entry><ind>161.98704</ind><dep>116</dep></entry>
+      <entry><ind>215.98272</ind><dep>159</dep></entry>
+      <entry><ind>269.9784</ind><dep>215</dep></entry>
+      <entry><ind>323.97408</ind><dep>270</dep></entry>
+      <entry><ind>377.96976</ind><dep>325</dep></entry>
+      <entry><ind>431.96544</ind><dep>360</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+	<effect>
+		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
+		<object-name>Lens</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_opaque</inherits-from>
+		<object-name>Cylinder_1</object-name>
+	</effect>
+
+ <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <object-name>Cylinder.001</object-name>
+ </effect>
+
+  <!--<animation>
+  <type>pick</type>
+  <object-name>ALT.minus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/altimeter/setting-inhg</property>
+       <step>-0.01</step>
+       <min>26.0</min>
+       <max>33.0</max>
+       <wrap>false</wrap>
+     </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/altimeter/setting-inhg</property>
+       <step>-0.1</step>
+       <min>26.0</min>
+       <max>33.0</max>
+       <wrap>false</wrap>
+     </binding>
+  </action>
+</animation>
+
+  <animation>
+  <type>pick</type>
+  <object-name>ALT.plus</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/altimeter/setting-inhg</property>
+       <step>0.01</step>
+       <min>26.0</min>
+       <max>33.0</max>
+       <wrap>false</wrap>
+     </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.1</interval-sec>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/altimeter/setting-inhg</property>
+       <step>0.1</step>
+       <min>26.0</min>
+       <max>33.0</max>
+       <wrap>false</wrap>
+     </binding>
+  </action>
+</animation>-->
+
+	<!-- Lighting -->
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder_1</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+		<emission>
+			<red>0.03</red>
+			<green>0.04</green>
+			<blue>0.05</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder_1</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+		<emission>
+			<red>0.016</red>
+			<green>0.02</green>
+			<blue>0.025</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder.001</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.6</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder.001</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+		<emission>
+			<red>0.1</red>
+			<green>0.3</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+
+	<!--    LABEL TEXT activated by hotspots -->
+	<text>
+		<name>LabelText</name>
+		<type type="string">literal</type>
+		<text type="string">Airspeed Indicator</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 0.01</x-m>
+			<y-m> 0.0 </y-m>
+			<z-m>-0.01</z-m>
+		</offsets>
+	</text>
+
+	<animation>
+		<type>material</type>
+		<object-name>LabelText</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>0.8</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LabelText</object-name>
+		<condition>
+			<property>/sim/panel-hotspots</property>
+		</condition>
+	</animation>
+
+
+</PropertyList>

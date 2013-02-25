@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!-- Light - Green -->
+<PropertyList>
+
+	<path>navlight.ac</path>
+
+	<animation>
+		<object-name>Light</object-name>
+		<nopreview/>
+	</animation>
+
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>LightNavPort</name>
+		<object-name>Light</object-name>
+		<position>
+			<x> 0 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</position>
+		<direction>
+			<x>-0.6</x>
+			<y>-1.0</y>
+			<z> 0.0</z>
+		</direction>
+		<ambient>
+			<r>0.66</r>
+			<g>0.12</g>
+			<b>0.12</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.2</g>
+			<b>0.2</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.2</g>
+			<b>0.2</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.0</l>
+			<q>1.1</q>
+		</attenuation>
+		<exponent>1.45</exponent>
+		<near-m>0.01</near-m>
+		<far-m>9</far-m>
+		<cutoff>150</cutoff>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Light</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/multiplay/generic/float[8]</property>
+				<value>9</value>
+			</greater-than>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+
+</PropertyList>

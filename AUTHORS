@@ -1,0 +1,18 @@
+* 3d model & YASim fdm: Emilian Huminiuc. (emilianh |at| gmail |dot| com, i4dnf on the flightgear forums)
+* JSBSim fdm: Ron Jensen
+* some nasal code from A6M2 by Syd Adams & Tat Nishioka.
+* some nasal code from fw190 by Detlef Faber.
+* shader code from the dangerdeep project (by Thorsten Jordan, Luis Barrancos and others (dangerdeep.sf.net))
+			    modified by Emilian Huminiuc.
+* guns particle effect from Emmanuel Baranger (helijah)
+* pre-stall sound modified from ASK21's ground-roll2.wav
+
+thanks to all those that provided feedback, hope to get even more.
+
+* Special thanks to Frederic Bouvier for commiting it to git, and for the great shaders.
+
+BETA version of this package released under the GNU-GPL V2, of which you can find a copy in this package (the COPYING file).
+
+BETA testers (list still open, please provide feedback):
+    * yoyo
+    * fredb

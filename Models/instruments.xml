@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--IAR80 Instruments positioning
+	This file is read by cokpit.xml
+	Datum is tip of propeller spinner-->
+<PropertyList>
+
+<!-- CENTER PANEL -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/mag-compass/mag-compass.xml</path>
+		<offsets>
+			<x-m>4.254</x-m>
+			<y-m>0.085</y-m>
+			<z-m>0.589</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/vsi/vsi.xml</path>
+		<offsets>
+			<x-m>4.254</x-m>
+			<y-m>0.085</y-m>
+			<z-m>0.493</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/alt/alt.xml</path>
+		<offsets>
+			<x-m>4.254</x-m>
+			<y-m>-0.085</y-m>
+			<z-m>0.589</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/vitezometru/vitezometru.xml</path>
+		<offsets>
+			<x-m>4.254</x-m>
+			<y-m>-0.085</y-m>
+			<z-m>0.493</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/turn-slip/turn-slip.xml</path>
+		<offsets>
+			<x-m>4.254</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>0.509</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/turo/turo.xml</path>
+		<offsets>
+			<x-m>4.232</x-m>
+			<y-m>-0.169</y-m>
+			<z-m>0.475</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/gear-ind/gear-ind.xml</path>
+		<offsets>
+			<x-m>4.254</x-m>
+			<y-m>-0.08</y-m>
+			<z-m>0.672</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+<!-- RIGHT PANEL -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/fuel/fuel.xml</path>
+		<offsets>
+			<x-m>4.216</x-m>
+			<y-m>0.247</y-m>
+			<z-m>0.539</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/lightswitch/lightswitchR.xml</path>
+		<offsets>
+			<x-m>4.207</x-m>
+			<y-m>0.225</y-m>
+			<z-m>0.581</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/starterswitch/starterswitch.xml</path>
+		<offsets>
+			<x-m>4.218</x-m>
+			<y-m>0.200</y-m>
+			<z-m>0.539</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/volt/volt.xml</path>
+		<offsets>
+			<x-m>4.230</x-m>
+			<y-m>0.279</y-m>
+			<z-m>0.474</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/clock/clock.xml</path>
+		<offsets>
+			<x-m>4.230</x-m>
+			<y-m>0.169</y-m>
+			<z-m>0.474</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/auto-fire-ext/auto-fire-ext.xml</path>
+		<offsets>
+			<x-m>4.200</x-m>
+			<y-m>0.169</y-m>
+			<z-m>0.614</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+<!-- SIGHTS -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/IOR-sight/IOR-sight.xml</path>
+		<offsets>
+			<x-m>4.31</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.656</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+<!--  LEFT PANEL -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/oil-temp/oil-temp.xml</path>
+		<offsets>
+			<x-m> 4.216</x-m>
+			<y-m>-0.169</y-m>
+			<z-m> 0.550</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/manifold/manifold.xml</path>
+		<offsets>
+			<x-m>4.230</x-m>
+			<y-m>-0.258</y-m>
+			<z-m>0.474</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/fuel-oil-press/fuel-oil-press.xml</path>
+		<offsets>
+			<x-m>4.216</x-m>
+			<y-m>-0.248</y-m>
+			<z-m>0.539</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/prop-pitch/prop-pitch.xml</path>
+		<offsets>
+			<x-m>4.199</x-m>
+			<y-m>-0.169</y-m>
+			<z-m>0.615</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/lightswitch/lightswitchL.xml</path>
+		<offsets>
+			<x-m>4.200</x-m>
+			<y-m>-0.210</y-m>
+			<z-m>0.615</z-m>
+			<pitch-deg>-12.325</pitch-deg>
+		</offsets>
+	</model>
+
+<!--   LOWER PANEL -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/gear-press/gear-press.xml</path>
+		<offsets>
+			<x-m> 3.8845</x-m>
+			<y-m>-0.170</y-m>
+			<z-m>-0.023</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/flaps-press/flaps-press.xml</path>
+		<offsets>
+			<x-m> 3.8845</x-m>
+			<y-m>-0.085</y-m>
+			<z-m>-0.023</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/pump-press/pump-press.xml</path>
+		<offsets>
+			<x-m> 3.8845</x-m>
+			<y-m> 0.000</y-m>
+			<z-m>-0.023</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/air-press/air-press.xml</path>
+		<offsets>
+			<x-m> 3.8845</x-m>
+			<y-m> 0.085</y-m>
+			<z-m>-0.023</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/brakes-press/brakes-press.xml</path>
+		<offsets>
+			<x-m> 3.8845</x-m>
+			<y-m> 0.170</y-m>
+			<z-m>-0.023</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+<!-- MAGNETO switch -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/magnetos/magnetos.xml</path>
+		<offsets>
+			<x-m>4.425</x-m>
+			<y-m>-0.415</y-m>
+			<z-m>0.133</z-m>
+			<pitch-deg>7</pitch-deg>
+			<heading-deg>46.5</heading-deg>
+			<roll-deg>-4</roll-deg>
+		</offsets>
+	</model>
+
+<!--  PROP-PITCH control -->
+	<model>
+		<path>Aircraft/IAR80/Models/Instruments/prop-pitch-control/prop-pitch-control.xml</path>
+		<offsets>
+			<x-m>4.396</x-m>
+			<y-m>-0.285</y-m>
+			<z-m>0.432</z-m>
+			<heading-deg>60</heading-deg>
+		</offsets>
+	</model>
+
+</PropertyList>

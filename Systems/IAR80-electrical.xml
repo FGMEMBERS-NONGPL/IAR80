@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+
+<!-- 12 Volt electrical system -->
+
+<PropertyList>
+
+  <!-- Supplier list -->
+
+  <supplier>
+    <name>Battery 1</name>
+    <prop>/systems/electrical/suppliers/battery[0]</prop>
+    <kind>battery</kind>
+    <volts>12</volts>
+    <amps>60</amps>   <!-- I have no idea! -->
+  </supplier>
+
+  <supplier>
+    <name>Alternator 1</name>
+    <prop>/systems/electrical/suppliers/alternator[0]</prop>
+    <kind>alternator</kind>
+    <rpm-source>/engines/engine[0]/rpm</rpm-source>
+    <volts>14</volts>
+    <amps>60</amps>   <!-- I have no idea! -->
+  </supplier>
+
+  <!-- Bus list -->
+
+  <bus>
+    <name>Master Bus</name>
+    <prop>/systems/electrical/outputs/bus[0]</prop>
+    <!-- Avionics outputs tied directly to bus, note that this is a -->
+    <!-- simple way to provide electrical outputs if you don't need -->
+    <!-- to put a circuit breaker or switch in front of the output. -->
+    <!-- *AND* if you don't care about back propogating the output -->
+    <!-- current. -->
+    <prop>/systems/electrical/outputs/audio-panel[0]</prop>
+    <prop>/systems/electrical/outputs/audio-panel[1]</prop>
+  </bus>
+
+  <!-- Generic Outputs -->
+
+  <output>
+    <name>Starter 1 Power</name>
+    <prop>/systems/electrical/outputs/starter[0]</prop>
+  </output>
+
+
+  <output>
+    <name>Instrument Power</name>
+    <prop>/systems/electrical/outputs/instr-ignition-switch</prop>
+  </output>
+
+  <output>
+    <name>Fuel Pump Power</name>
+    <prop>/systems/electrical/outputs/fuel-pump</prop>
+  </output>
+
+  <output>
+    <name>Turn Coordinator Power</name>
+    <prop>/systems/electrical/outputs/turn-coordinator</prop>
+  </output>
+
+
+  <output>
+    <name>Instrument Lights Power</name>
+    <prop>/systems/electrical/outputs/instrument-lights</prop>
+  </output>
+
+  <output>
+    <name>Pitot Heat Power</name>
+    <prop>/systems/electrical/outputs/pitot-heat</prop>
+  </output>
+
+  <output>
+    <name>Nav Light Power</name>
+    <prop>/systems/electrical/outputs/nav-lights</prop>
+  </output>
+
+
+  <!-- connect in power sources -->
+
+  <connector>
+    <input>Alternator 1</input>
+    <output>Master Bus</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/master-alt</prop>
+	<initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Battery 1</input>
+    <output>Master Bus</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/master-bat</prop>
+	<initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <!-- connect starter output -->
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Starter 1 Power</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/starter</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <!-- connect master bus outputs -->
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Instrument Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/instr-ignition-switch</prop>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Fuel Pump Power</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/fuel-pump</prop>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Turn Coordinator Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/turn-coordinator</prop>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Instrument Lights Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/instrument-lights</prop>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Pitot Heat Power</output>
+    <switch>
+      <prop>/controls/switches/pitot-heat</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Nav Light Power</output>
+    <switch>
+      <prop>/controls/lighting/nav-lights</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+</PropertyList>

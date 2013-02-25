@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>turn-slip.ac</path>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle</object-name>
+    <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+    <interpolation>
+    <entry><ind>  -2.5</ind><dep>-25.0</dep></entry>
+    <entry><ind>  -2.0</ind><dep>-20.0</dep></entry>
+    <entry><ind>   0.0</ind><dep>  0.0</dep></entry>
+    <entry><ind>   2.0</ind><dep> 20.0</dep></entry>
+    <entry><ind>   2.5</ind><dep> 25.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.025</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Ball</object-name>
+    <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <factor>5.729</factor>
+<!--
+   From the source for slip_skid_ball.cxx, the number returned is (-z_accel/y_accel)*10.
+   For small theta, theta~=tan(theta) when theta is in radians.  So the angle of a "ball"
+   undergoing z_accel and y_accel hung on the end of a string makes with the verticle
+   will be approximately -z_accel/y_accel radians. Converting to degrees, multiply by
+   180/pi=57.29, or 5.729 times the returned value. Edited by Dave Perry, 2/26/06.
+-->
+	<min-deg>-5</min-deg>
+	<max-deg>5</max-deg>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0.25</z-m>  <!--  Makes the radius of curvature for the glass tube ~10 inches -->
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+	<effect>
+		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
+		<object-name>Lens</object-name>
+        <object-name>Glass1</object-name>
+	</effect>
+
+    <effect>
+        <inherits-from>Aircraft/IAR80/Models/Effects/iar80_alu_internal</inherits-from>
+        <object-name>Cylinder.004</object-name>
+    </effect>
+
+	<effect>
+		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_opaque</inherits-from>
+		<object-name>Cylinder_1</object-name>
+	</effect>
+
+   <effect>
+	 <inherits-from>Effects/model-transparent</inherits-from>
+	 <object-name>Cylinder.002</object-name>
+   </effect>
+
+	<!-- Lighting -->
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder_1</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+		<emission>
+			<red>0.03</red>
+			<green>0.04</green>
+			<blue>0.05</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder_1</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+		<emission>
+			<red>0.015</red>
+			<green>0.02</green>
+			<blue>0.025</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder.002</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.6</green>
+			<blue>0.5</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cylinder.002</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+		<emission>
+			<red>0.1</red>
+			<green>0.3</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+
+	<!--    LABEL TEXT activated by hotspots -->
+	<text>
+		<name>LabelText</name>
+		<type type="string">literal</type>
+		<text type="string">Turn/slip</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 0.01</x-m>
+			<y-m> 0.0 </y-m>
+			<z-m>-0.01</z-m>
+		</offsets>
+	</text>
+
+	<animation>
+		<type>material</type>
+		<object-name>LabelText</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>0.8</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LabelText</object-name>
+		<condition>
+			<property>/sim/panel-hotspots</property>
+		</condition>
+	</animation>
+
+</PropertyList>

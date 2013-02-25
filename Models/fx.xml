@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--IAR80 particle effects (smoke, contrail, propwash)
+	This file is read by iar890.xml
+	Datum is tip of propeller spinner-->
+<PropertyList>
+
+<!-- ENGINE STARTUP SMOKE -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/startup-smoke.xml</path>
+		<offsets>
+			<x-m> 1.822</x-m>
+			<y-m>-0.606</y-m>
+			<z-m> 0.074</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-0.1</pitch-deg>
+			<heading-deg>-60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/startup-smoke.xml</path>
+		<offsets>
+			<x-m>1.822</x-m>
+			<y-m>0.606</y-m>
+			<z-m>0.074</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0.1</pitch-deg>
+			<heading-deg>60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/startup-smoke.xml</path>
+		<offsets>
+			<x-m> 1.764</x-m>
+			<y-m> 0.190</y-m>
+			<z-m>-0.623</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>60</pitch-deg>
+			<heading-deg>10</heading-deg>
+		</offsets>
+		<scale> 0.75 </scale>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/startup-smoke.xml</path>
+		<offsets>
+			<x-m> 1.757</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>-0.531</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-60</pitch-deg>
+			<heading-deg>-10</heading-deg>
+		</offsets>
+		<scale> 0.5 </scale>
+	</model>
+
+<!-- ENGINE RUNNING SMOKE -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/running-smoke.xml</path>
+		<offsets>
+			<x-m> 1.822</x-m>
+			<y-m>-0.606</y-m>
+			<z-m> 0.074</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-0.1</pitch-deg>
+			<heading-deg>-60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/running-smoke.xml</path>
+		<offsets>
+			<x-m>1.822</x-m>
+			<y-m>0.606</y-m>
+			<z-m>0.074</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0.1</pitch-deg>
+			<heading-deg>60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/running-smoke-l.xml</path>
+		<offsets>
+			<x-m> 1.764</x-m>
+			<y-m> 0.190</y-m>
+			<z-m>-0.623</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>60</pitch-deg>
+			<heading-deg>10</heading-deg>
+		</offsets>
+		<scale> 0.5 </scale>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/running-smoke-l.xml</path>
+		<offsets>
+			<x-m> 1.757</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>-0.531</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-60</pitch-deg>
+			<heading-deg>-10</heading-deg>
+		</offsets>
+		<scale> 0.25 </scale>
+	</model>
+
+<!-- ENGINE wear SMOKE -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/smoke-oil.xml</path>
+		<offsets>
+			<x-m> 1.822</x-m>
+			<y-m>-0.606</y-m>
+			<z-m> 0.074</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-0.1</pitch-deg>
+			<heading-deg>-60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/smoke-oil.xml</path>
+		<offsets>
+			<x-m>1.822</x-m>
+			<y-m>0.606</y-m>
+			<z-m>0.074</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0.1</pitch-deg>
+			<heading-deg>60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/smoke-oil.xml</path>
+		<offsets>
+			<x-m> 1.764</x-m>
+			<y-m> 0.190</y-m>
+			<z-m>-0.623</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>60</pitch-deg>
+			<heading-deg>10</heading-deg>
+		</offsets>
+		<scale> 0.5 </scale>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/smoke-oil.xml</path>
+		<offsets>
+			<x-m> 1.757</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>-0.531</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>-60</pitch-deg>
+			<heading-deg>-10</heading-deg>
+		</offsets>
+		<scale> 0.25 </scale>
+	</model>
+
+<!-- CONTRAIL -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/contrail.xml</path>
+		<offsets>
+			<x-m>80</x-m>
+			<y-m> 0</y-m>
+			<z-m> 0</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+
+<!-- WING PRE-STALL vortex -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/wing-vortex.xml</path>
+		<offsets>
+			<x-m> 2.590</x-m>
+			<y-m>-5.213</y-m>
+			<z-m>-0.042</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>60</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/wing-vortex.xml</path>
+		<offsets>
+			<x-m> 2.590</x-m>
+			<y-m> 5.213</y-m>
+			<z-m>-0.042</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>-60</heading-deg>
+		</offsets>
+	</model>
+
+<!--PROP WASH-->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/prop-wash.xml</path>
+		<offsets>
+			<x-m>10</x-m>
+			<y-m> 0</y-m>
+			<z-m> 0</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>
+				<property>orientation/pitch-deg</property>
+				<factor>-1.0</factor>
+			</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>prop-wash</object-name>
+		<property>orientation/pitch-deg</property>
+		<factor>-1.0</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>prop-wash</object-name>
+		<property>position/altitude-agl-ft</property>
+		<factor>-0.3</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y> 0</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>prop-wash</object-name>
+		<property>position/altitude-agl-ft</property>
+		<factor>-0.3</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- Gunsmoke -->
+<!-- LEFT -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/gun-smoke.xml</path>
+		<scale>1.25</scale>
+		<offsets>
+			<x-m> 1.808070</x-m>
+			<y-m>-1.965050</y-m>
+			<z-m>-0.196901</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 180</pitch-deg>
+			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/mg-smoke.xml</path>
+		<offsets>
+			<x-m> 1.929080</x-m>
+			<y-m>-2.115010</y-m>
+			<z-m>-0.192938</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 180</pitch-deg>
+			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/mg-smoke.xml</path>
+		<offsets>
+			<x-m> 1.920240</x-m>
+			<y-m>-2.684980</y-m>
+			<z-m>-0.163068</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 180</pitch-deg>
+			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+<!-- Gunsmoke -->
+<!-- RIGHT -->
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/gun-smoke.xml</path>
+		<scale>1.25</scale>
+		<offsets>
+			<x-m> 1.808070</x-m>
+			<y-m> 1.965050</y-m>
+			<z-m>-0.196901</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 180</pitch-deg>
+			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/mg-smoke.xml</path>
+		<offsets>
+			<x-m> 1.929080</x-m>
+			<y-m> 2.115010</y-m>
+			<z-m>-0.192938</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 180</pitch-deg>
+			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/mg-smoke.xml</path>
+		<offsets>
+			<x-m> 1.920240</x-m>
+			<y-m> 2.684980</y-m>
+			<z-m>-0.163068</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 180</pitch-deg>
+			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+<!-- GEAR TOUCHDOWN MODE -->
+	<model>
+	    <path>Aircraft/IAR80/Models/Fx/gear-smoke-l.xml</path>
+	    <offsets>
+		<x-m> 2.573</x-m>
+		<y-m>-1.637</y-m>
+		<z-m>-1.685</z-m>
+		<roll-deg>0</roll-deg>
+		<pitch-deg>0</pitch-deg>
+		<heading-deg>60</heading-deg>
+	    </offsets>
+	</model>
+
+	<model>
+	    <path>Aircraft/IAR80/Models/Fx/gear-smoke-r.xml</path>
+	    <offsets>
+		<x-m> 2.573</x-m>
+		<y-m> 1.637</y-m>
+		<z-m>-1.685</z-m>
+		<roll-deg>0</roll-deg>
+		<pitch-deg>0</pitch-deg>
+		<heading-deg>-60</heading-deg>
+	    </offsets>
+	</model>
+
+</PropertyList>

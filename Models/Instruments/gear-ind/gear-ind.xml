@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>gear-ind.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Lup</object-name>
+    <condition>
+      <equals>
+	<property>/gear/gear[0]/position-norm</property>
+	<value>0</value>
+      </equals>
+    </condition>
+    <emission>
+	<red>0.7</red>
+	<green>0.12</green>
+	<blue>0.12</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Rup</object-name>
+    <condition>
+      <equals>
+	<property>/gear/gear[1]/position-norm</property>
+	<value>0</value>
+      </equals>
+    </condition>
+    <emission>
+	<red>0.7</red>
+	<green>0.12</green>
+	<blue>0.12</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Ldn</object-name>
+    <condition>
+      <equals>
+	<property>/gear/gear[0]/position-norm</property>
+	<value>1</value>
+      </equals>
+    </condition>
+    <emission>
+	<red>0.12</red>
+	<green>0.6</green>
+	<blue>0.12</blue>
+    </emission>
+  </animation>
+
+
+    <animation>
+	<type>material</type>
+	<object-name>Rdn</object-name>
+	<condition>
+	<equals>
+	    <property>/gear/gear[1]/position-norm</property>
+	    <value>1</value>
+	</equals>
+	</condition>
+	<emission>
+	    <red>0.12</red>
+	    <green>0.6</green>
+	    <blue>0.12</blue>
+	</emission>
+    </animation>
+
+   <!--    LABEL TEXT activated by hotspots -->
+   <text>
+       <name>LabelText</name>
+       <type type="string">literal</type>
+       <text type="string">Gear Indicator</text>
+       <draw-text type="bool">true</draw-text>
+       <font>Helvetica.txf</font>
+       <character-size type="double">0.012</character-size>
+       <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+       <axis-alignment>yz-plane</axis-alignment>
+       <max-height>0.2</max-height>
+       <max-width>0.07</max-width>
+       <font-resolution>
+	   <width type="int">32</width>
+	   <height type="int">32</height>
+       </font-resolution>
+       <alignment>center-center</alignment>
+       <offsets>
+	   <x-m> 0.01</x-m>
+	   <y-m> 0.0 </y-m>
+	   <z-m>-0.01</z-m>
+       </offsets>
+   </text>
+
+   <animation>
+       <type>material</type>
+       <object-name>LabelText</object-name>
+       <emission>
+	   <red>1.0</red>
+	   <green>0.8</green>
+	   <blue>0.0</blue>
+       </emission>
+   </animation>
+
+   <animation>
+       <type>select</type>
+       <object-name>LabelText</object-name>
+       <condition>
+	   <property>/sim/panel-hotspots</property>
+       </condition>
+   </animation>
+
+   <effect>
+       <inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
+       <object-name>Lup</object-name>
+       <object-name>Rup</object-name>
+       <object-name>Ldn</object-name>
+       <object-name>Rdn</object-name>
+   </effect>
+
+</PropertyList>
+

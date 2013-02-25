@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--IAR80 cockpit animation file.
+	This file is read by iar80.xml
+	Datum is tip of propeller spinner.
+	-->
+<PropertyList>
+
+	<path>cockpit.ac</path>
+
+<!-- INSTRUMENTS import -->
+	<model>
+		<path>Aircraft/IAR80/Models/instruments.xml</path>
+	</model>
+
+	<!--THROTTLE-->
+	<animation>
+		<type>rotate</type>
+		<object-name>Throttle</object-name>
+		<object-name>ThrottleRod</object-name>
+		<property>controls/engines/engine[0]/throttle-input</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep>-70</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep> 20</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m> 4.357</x-m>
+			<y-m>-0.394</y-m>
+			<z-m> 0.195</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ThrottleRod</object-name>
+		<property>controls/engines/engine[0]/throttle-input</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep> 70</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep>-20</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m> 4.327</x-m>
+			<y-m>-0.366</y-m>
+			<z-m> 0.149</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Throttle</object-name>
+		<visible>true</visible>
+		<action>
+			<name>small increase (scrollwheel)</name>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step>0.05</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>small decrease (scrollwheel)</name>
+			<button>4</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step>-0.05</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Increase</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step>0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Decrease</name>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/throttle</property>
+				<step>-0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+	</animation>
+
+	<!--Mixture Lever-->
+	<animation>
+		<type>rotate</type>
+		<object-name>MixLev</object-name>
+		<object-name>MixRod</object-name>
+		<property>controls/engines/engine[0]/mixture</property>
+		<interpolation>
+			<entry>			<ind>0</ind>		<dep> 35</dep>		</entry>
+			<entry>			<ind>1</ind>		<dep>-30</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m> 4.276</x-m>
+			<y-m>-0.380</y-m>
+			<z-m> 0.232</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>MixRod</object-name>
+		<property>controls/engines/engine[0]/mixture</property>
+		<interpolation>
+			<entry>			<ind>0</ind>		<dep>-35</dep>		</entry>
+			<entry>			<ind>1</ind>		<dep> 30</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m> 4.31</x-m>
+			<y-m>-0.38</y-m>
+			<z-m> 0.18</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>MixLev</object-name>
+		<visible>true</visible>
+		<action>
+			<name>small increase (scrollwheel)</name>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/mixture</property>
+				<step>0.05</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>small decrease (scrollwheel)</name>
+			<button>4</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/mixture</property>
+				<step>-0.05</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Increase</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/mixture</property>
+				<step>0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Decrease</name>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/mixture</property>
+				<step>-0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+	</animation>
+
+
+	<!-- STICK -->
+	<animation>
+		<type>rotate</type>
+		<object-name>Stick</object-name>
+		<object-name>AilAxle</object-name>
+		<object-name>ElevAxle</object-name>
+		<object-name>StickTrigger</object-name>
+		<object-name>BrakeBut</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>-15</factor>
+		<center>
+			<x-m> 4.303</x-m>
+			<y-m>-0.030</y-m>
+			<z-m>-0.150</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Stick</object-name>
+		<object-name>ElevAxle</object-name>
+		<object-name>StickTrigger</object-name>
+		<object-name>BrakeBut</object-name>
+		<property>controls/flight/elevator-input</property>
+		<factor>-15</factor>
+		<center>
+			<x-m> 4.303</x-m>
+			<y-m>-0.030</y-m>
+			<z-m>-0.150</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevAxle</object-name>
+		<property>controls/flight/elevator-input</property>
+		<factor>12</factor>
+		<center>
+			<x-m> 4.209</x-m>
+			<y-m>-0.032</y-m>
+			<z-m>-0.250</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>StickTrigger</object-name>
+		<property>controls/armament/trigger</property>
+		<factor>10</factor>
+		<center>
+			<x-m> 4.330</x-m>
+			<y-m>-0.032</y-m>
+			<z-m> 0.220</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- RUDDER PEDALS -->
+	<animation>
+		<type>rotate</type>
+		<object-name>Palonier</object-name>
+		<object-name>RRod1</object-name>
+		<object-name>RRod2</object-name>
+		<object-name>RCabL</object-name>
+		<object-name>RCabR</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>10</factor>
+		<center>
+			<x-m> 3.939</x-m>
+			<y-m> 0.000</y-m>
+			<z-m>-0.038</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RRod1</object-name>
+		<object-name>RRod2</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>-7</factor>
+		<center>
+			<x-m> 4.051</x-m>
+			<y-m> 0.000</y-m>
+			<z-m>-0.224</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RRod2</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>4</factor>
+		<center>
+			<x-m> 4.000</x-m>
+			<y-m> 0.100</y-m>
+			<z-m>-0.224</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RCabL</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>-10</factor>
+		<center>
+			<x-m> 3.940</x-m>
+			<y-m>-0.052</y-m>
+			<z-m>-0.324</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RCabR</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>-10</factor>
+		<center>
+			<x-m> 3.940</x-m>
+			<y-m> 0.052</y-m>
+			<z-m>-0.324</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--ELEVATOR TRIM WHEEL-->
+	<animation>
+		<type>rotate</type>
+		<object-name>TrimWheel</object-name>
+		<property>controls/flight/elevator-trim</property>
+		<factor>150</factor>
+		<center>
+			<x-m> 4.517</x-m>
+			<y-m>-0.325</y-m>
+			<z-m>-0.129</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>TrimWheel</object-name>
+		<visible>true</visible>
+		<action>
+			<name>Increase (scrollwheel)</name>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<step>0.01</step>
+				<min>-1</min>
+				<max> 1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Decrease (scrollwheel)</name>
+			<button>4</button>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<step>-0.01</step>
+				<min>-1</min>
+				<max> 1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Increase</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<step>-0.1</step>
+				<min>-1</min>
+				<max> 1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Decrease</name>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<step>0.1</step>
+				<min>-1</min>
+				<max> 1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+	</animation>
+
+	<!--FLAPS LEVER-->
+	<animation>
+		<type>rotate</type>
+		<object-name>FlapLev</object-name>
+		<property>controls/flight/flaps</property>
+		<factor>-17</factor>
+		<center>
+			<x-m> 4.332</x-m>
+			<y-m>-0.281</y-m>
+			<z-m>-0.096</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>FlapLev</object-name>
+		<action>
+			<name>Increase</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>controls.flapsDown(1)</script>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>nasal</command>
+					<script>controls.flapsDown(0)</script>
+				</binding>
+			</mod-up>
+		</action>
+		<action>
+			<name>Decrease</name>
+			<button>1</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>controls.flapsDown(-1)</script>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>nasal</command>
+					<script>controls.flapsDown(0)</script>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+	<!--GEAR LEVER-->
+	<animation>
+		<type>rotate</type>
+		<object-name>GearLev</object-name>
+		<property>controls/gear/gear-down</property>
+		<factor>-25</factor>
+		<center>
+			<x-m> 4.332</x-m>
+			<y-m>-0.281</y-m>
+			<z-m>-0.096</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>GearLev</object-name>
+		<action>
+			<name>GearToggle</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/gear-down</property>
+			</binding>
+		</action>
+	</animation>
+
+	<!--RADIATOR LEVER-->
+	<animation>
+		<type>rotate</type>
+		<object-name>RadLev</object-name>
+		<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+		<factor>-25</factor>
+		<center>
+			<x-m> 4.332</x-m>
+			<y-m>-0.281</y-m>
+			<z-m>-0.096</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>RadLev</object-name>
+		<action>
+			<name>Increase (scrollwheel)</name>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+				<step>0.01</step>
+				<min>-1</min>
+				<max> 1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Decrease (scrollwheel)</name>
+			<button>4</button>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+				<step>-0.01</step>
+				<min>-1</min>
+				<max> 1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Increase</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+				<step>0.2</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+		<action>
+			<name>Decrease</name>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+				<step>-0.2</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+		</action>
+	</animation>
+
+
+	<!-- PRIMER -->
+	<animation>
+		<type>translate</type>
+		<object-name>Primer</object-name>
+		<property>controls/engines/engine/primer-pos-norm</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep>-0.0229</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep> 0.0044</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.131</x-m>
+			<y-m>0.369</y-m>
+			<z-m>0.267</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y> 0</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Primer</object-name>
+		<action>
+			<name>Primer</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/primer-pressed</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/engines/engine[0]/primer-pressed</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+	<!-- INTRERUPATOR GENERAL -->
+	<animation>
+		<type>rotate</type>
+		<object-name>IntrGeneral</object-name>
+		<property>controls/switches/master-switch</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep> 0</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep>90</dep>		</entry>
+		</interpolation>
+		<axis>
+			<x1-m>4.890</x1-m>			<y1-m>0.270</y1-m>			<z1-m>0.394</z1-m>
+			<x2-m>4.898</x2-m>			<y2-m>0.270</y2-m>			<z2-m>0.387</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>IntrGeneral</object-name>
+		<action>
+			<name>IntrGeneral</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/master-alt</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/engines/engine[0]/master-bat</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/switches/master-switch</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/electric/battery-switch</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/electric/engine[0]/generator</property>
+			</binding>
+		</action>
+	</animation>
+
+	<!-- Navlight switch -->
+	<animation>
+		<type>translate</type>
+		<object-name>NavLigSw</object-name>
+		<property>controls/lighting/nav-lights</property>
+		<factor>0.0025</factor>
+		<axis>
+			<x1-m>4.722</x1-m>			<y1-m>0.317</y1-m>			<z1-m>0.173</z1-m>
+			<x2-m>4.718</x2-m>			<y2-m>0.317</y2-m>			<z2-m>0.176</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>NavLigSw</object-name>
+		<action>
+			<name>NavLights</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/lighting/nav-lights</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/switches/nav-lights</property>
+			</binding>
+		</action>
+	</animation>
+
+	<!-- CHAIR -->
+	<animation>
+		<type>rotate</type>
+		<object-name>ChairLever</object-name>
+		<object-name>ChairLever.001</object-name>
+		<object-name>Seat</object-name>
+		<property>controls/seat/setting</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep> 0</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep>15</dep>		</entry>
+			<entry>		<ind>2</ind>		<dep>25</dep>		</entry>
+			<entry>		<ind>3</ind>		<dep>40</dep>		</entry>
+			<entry>		<ind>4</ind>		<dep>53</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m> 4.517</x-m>
+			<y-m> 0.332</y-m>
+			<z-m>-0.128</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y>-1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Seat</object-name>
+		<property>controls/seat/setting</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep> 0</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep>15</dep>		</entry>
+			<entry>		<ind>2</ind>		<dep>25</dep>		</entry>
+			<entry>		<ind>3</ind>		<dep>40</dep>		</entry>
+			<entry>		<ind>4</ind>		<dep>53</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m> 4.66</x-m>
+			<y-m> 0.00</y-m>
+			<z-m>-0.19</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y> 1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ChairLever.001</object-name>
+		<property>controls/seat/safety</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep> 0</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep>24</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.51</x-m>
+			<y-m>0.32</y-m>
+			<z-m>0.08</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y> 1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ChairLever</object-name>
+		<visible>true</visible>
+		<action>
+			<name>Increase</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/seat/setting</property>
+				<step>1</step>
+				<min>0</min>
+				<max>4</max>
+				<wrap>0</wrap>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/seat/safety</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/seat/safety</property>
+				</binding>
+			</mod-up>
+		</action>
+		<action>
+			<name>Decrease</name>
+			<button>1</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/seat/setting</property>
+				<step>-1</step>
+				<min>0</min>
+				<max>4</max>
+				<wrap>0</wrap>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/seat/safety</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/seat/safety</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+
+
+	<!-- 	Gear Emergency Release -->
+	<animation>
+		<type>rotate</type>
+		<object-name>GearEmergRel</object-name>
+		<property>controls/gear/emergrel-pos-norm</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep>-90</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep>  0</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.425</x-m>
+			<y-m>-0.414</y-m>
+			<z-m>0.025</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y>-1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>GearEmergRel</object-name>
+		<action>
+			<name>GearEmRel</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/emergrel-click</property>
+			</binding>
+		</action>
+	</animation>
+
+	<!-- 	Gear Safety knob -->
+	<animation>
+		<type>rotate</type>
+		<object-name>GearSafetyKnob</object-name>
+		<property>controls/gear/safety-pos-norm</property>
+		<interpolation>
+			<entry> 		<ind>0</ind>		<dep>0</dep>		</entry>
+			<entry>			<ind>1</ind>		<dep>120</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.196</x-m>
+			<y-m>0.424</y-m>
+			<z-m>0.115</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y>-1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>GearSafetyKnob</object-name>
+		<action>
+			<name>GearSafety</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/safety-click</property>
+			</binding>
+		</action>
+	</animation>
+
+	<!-- 	Gear Pump -->
+	<animation>
+		<type>rotate</type>
+		<object-name>ManGear</object-name>
+		<property>controls/gear/mangear-pos-norm</property>
+		<interpolation>
+			<entry>		<ind>0.0</ind>		<dep>  0</dep>		</entry>
+			<entry>		<ind>0.3</ind>		<dep>-20</dep>		</entry>
+			<entry>		<ind>1.0</ind>		<dep> 20</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.36</x-m>
+			<y-m>0.43</y-m>
+			<z-m>0.03</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y> 1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ManGear</object-name>
+		<action>
+			<name>Manual Pump</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/mangear-click</property>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-toggle</command>
+					<property>controls/gear/mangear-click</property>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+	<!-- 	GunsMasterArm -->
+	<animation>
+		<type>rotate</type>
+		<object-name>GunSelectSw</object-name>
+		<property>controls/armament/gunsel-pos-norm</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep>90</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep> 0</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.326</x-m>
+			<y-m>-0.403</y-m>
+			<z-m>0.012</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y>-1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>GunSelectSw</object-name>
+		<action>
+			<name>GunArm</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/armament/gunsel-click</property>
+			</binding>
+		</action>
+	</animation>
+
+	<!--    MG Master Arm -->
+	<animation>
+		<type>rotate</type>
+		<object-name>MGSelectSw</object-name>
+		<property>controls/armament/mgsel-pos-norm</property>
+		<interpolation>
+			<entry>		<ind>0</ind>		<dep>90</dep>		</entry>
+			<entry>		<ind>1</ind>		<dep> 0</dep>		</entry>
+		</interpolation>
+		<center>
+			<x-m>4.326</x-m>
+			<y-m>-0.403</y-m>
+			<z-m>0.012</z-m>
+		</center>
+		<axis>
+			<x> 0</x>
+			<y>-1</y>
+			<z> 0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>MGSelectSw</object-name>
+		<action>
+			<name>MGArm</name>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/armament/mgsel-click</property>
+			</binding>
+		</action>
+	</animation>
+
+
+	<!-- LABELS activated by hotspots -->
+	<text>
+		<name>LabelPrimer</name>
+		<type type="string">literal</type>
+		<text type="string">Primer</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m>4.15</x-m>
+			<y-m>0.32</y-m>
+			<z-m>0.26</z-m>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelCFlaps</name>
+		<type type="string">literal</type>
+		<text type="string">Cowl Flaps</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.401</x-m>
+			<y-m> 0.247</y-m>
+			<z-m>-0.100</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelGear</name>
+		<type type="string">literal</type>
+		<text type="string">Gear</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.401</x-m>
+			<y-m>-0.281</y-m>
+			<z-m>-0.100</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelFlaps</name>
+		<type type="string">literal</type>
+		<text type="string">Flaps</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.401</x-m>
+			<y-m>-0.349</y-m>
+			<z-m>-0.100</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelEGear</name>
+		<type type="string">literal</type>
+		<text type="string">Emerg. Gear Release</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.443</x-m>
+			<y-m>-0.405</y-m>
+			<z-m> 0.015</z-m>
+			<pitch-deg>-60</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelGunnery</name>
+		<type type="string">literal</type>
+		<text type="string">Gun--MG</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.351</x-m>
+			<y-m>-0.415</y-m>
+			<z-m> 0.012</z-m>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelThrottle</name>
+		<type type="string">literal</type>
+		<text type="string">Throttle</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.357</x-m>
+			<y-m>-0.330</y-m>
+			<z-m> 0.220</z-m>
+			<pitch-deg>-60</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelMixt</name>
+		<type type="string">literal</type>
+		<text type="string">Mixture</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.252</x-m>
+			<y-m>-0.36</y-m>
+			<z-m> 0.265</z-m>
+			<pitch-deg>-60</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelMSwitch</name>
+		<type type="string">literal</type>
+		<text type="string">Master Switch</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>xz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.87</x-m>
+			<y-m> 0.27</y-m>
+			<z-m> 0.39</z-m>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelGSafe</name>
+		<type type="string">literal</type>
+		<text type="string">Gear Safety</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>xz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.195</x-m>
+			<y-m> 0.408</y-m>
+			<z-m> 0.115</z-m>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelMPump</name>
+		<type type="string">literal</type>
+		<text type="string">Manual Pump</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>xz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.365</x-m>
+			<y-m> 0.408</y-m>
+			<z-m> 0.180</z-m>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelNavL</name>
+		<type type="string">literal</type>
+		<text type="string">Nav Lights</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.710</x-m>
+			<y-m> 0.317</y-m>
+			<z-m> 0.174</z-m>
+			<pitch-deg>-60</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelTrim</name>
+		<type type="string">literal</type>
+		<text type="string">Elevator Trim</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.517</x-m>
+			<y-m>-0.250</y-m>
+			<z-m>-0.080</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</text>
+
+	<text>
+		<name>LabelSeatAdj</name>
+		<type type="string">literal</type>
+		<text type="string">Seat Adjust</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>xz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 4.520</x-m>
+			<y-m> 0.310</y-m>
+			<z-m> 0.120</z-m>
+		</offsets>
+	</text>
+
+	<animation>
+		<type>material</type>
+		<object-name>LabelPrimer</object-name>
+		<object-name>LabelCFlaps</object-name>
+		<object-name>LabelFlaps</object-name>
+		<object-name>LabelGear</object-name>
+		<object-name>LabelEGear</object-name>
+		<object-name>LabelGunnery</object-name>
+		<object-name>LabelThrottle</object-name>
+		<object-name>LabelMixt</object-name>
+		<object-name>LabelMSwitch</object-name>
+		<object-name>LabelGSafe</object-name>
+		<object-name>LabelMPump</object-name>
+		<object-name>LabelNavL</object-name>
+		<object-name>LabelTrim</object-name>
+		<object-name>LabelSeatAdj</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>0.9</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LabelPrimer</object-name>
+		<object-name>LabelCFlaps</object-name>
+		<object-name>LabelFlaps</object-name>
+		<object-name>LabelGear</object-name>
+		<object-name>LabelEGear</object-name>
+		<object-name>LabelGunnery</object-name>
+		<object-name>LabelThrottle</object-name>
+		<object-name>LabelMixt</object-name>
+		<object-name>LabelMSwitch</object-name>
+		<object-name>LabelGSafe</object-name>
+		<object-name>LabelMPump</object-name>
+		<object-name>LabelNavL</object-name>
+		<object-name>LabelTrim</object-name>
+		<object-name>LabelSeatAdj</object-name>
+		<condition>
+			<property>/sim/panel-hotspots</property>
+		</condition>
+	</animation>
+
+<!-- 	Material Effects -->
+
+   <!-- Pannel Lighting -->
+   <animation>
+	   <type>material</type>
+	   <object-name>Dash_L</object-name>
+	   <condition>
+		   <equals>
+			   <property>controls/lighting/panel-left</property>
+			   <value>1</value>
+		   </equals>
+	   </condition>
+	   <emission>
+		   <red>	0.03</red>
+		   <green>	0.04</green>
+		   <blue>	0.05</blue>
+	   </emission>
+   </animation>
+
+   <animation>
+	   <type>material</type>
+	   <object-name>Dash_R</object-name>
+	   <condition>
+		   <equals>
+			   <property>controls/lighting/panel-right</property>
+			   <value>1</value>
+		   </equals>
+	   </condition>
+	   <emission>
+		   <red>	0.03</red>
+		   <green>	0.04</green>
+		   <blue>	0.05</blue>
+	   </emission>
+   </animation>
+
+   <animation>
+	   <type>material</type>
+	   <object-name>Dash_C</object-name>
+	   <object-name>Photo</object-name>
+	   <condition>
+		   <and>
+			   <equals>
+				   <property>controls/lighting/panel-right</property>
+				   <value>1</value>
+			   </equals>
+			   <equals>
+				   <property>controls/lighting/panel-left</property>
+				   <value>1</value>
+			   </equals>
+		   </and>
+	   </condition>
+	   <emission>
+		   <red>	0.03</red>
+		   <green>	0.04</green>
+		   <blue>	0.05</blue>
+	   </emission>
+   </animation>
+
+   <animation>
+	   <type>material</type>
+	   <object-name>Dash_C</object-name>
+	   <object-name>Photo</object-name>
+	   <condition>
+		   <or>
+			   <equals>
+				   <property>controls/lighting/panel-right</property>
+				   <value>1</value>
+			   </equals>
+			   <equals>
+				   <property>controls/lighting/panel-left</property>
+				   <value>1</value>
+			   </equals>
+		   </or>
+	   </condition>
+	   <emission>
+		   <red>	0.01</red>
+		   <green>	0.02</green>
+		   <blue>	0.025</blue>
+	   </emission>
+   </animation>
+
+   <!--     rest of cockpit with lower lighting -->
+   <animation>
+	   <type>material</type>
+	   <object-name>ChairLever</object-name>
+	   <object-name>ChairLever.001_1</object-name>
+	   <object-name>Circle.001</object-name>
+	   <object-name>Circle.003</object-name>
+	   <object-name>Circle.005</object-name>
+	   <object-name>Circle.006</object-name>
+	   <object-name>Circle.007</object-name>
+	   <object-name>Circle.010</object-name>
+	   <object-name>Circle.011</object-name>
+	   <object-name>Circle.013</object-name>
+	   <object-name>Cockpit</object-name>
+	   <object-name>EmGearsock</object-name>
+	   <object-name>FireExt</object-name>
+	   <object-name>FireExtBut</object-name>
+	   <object-name>FlapLev</object-name>
+	   <object-name>FuseBox</object-name>
+	   <object-name>GearLev</object-name>
+	   <object-name>Guards</object-name>
+	   <object-name>Holders</object-name>
+	   <object-name>Horn</object-name>
+	   <object-name>ManGear</object-name>
+	   <object-name>MapHolder</object-name>
+	   <object-name>MaskSocket</object-name>
+	   <object-name>MixLev</object-name>
+	   <object-name>Primer</object-name>
+	   <object-name>RadLev</object-name>
+	   <object-name>oxytank</object-name>
+	   <object-name>Seat</object-name>
+	   <object-name>SeatAxle</object-name>
+	   <object-name>Stair</object-name>
+	   <object-name>Throttle</object-name>
+	   <condition>
+		   <and>
+			   <equals>
+				   <property>controls/lighting/panel-right</property>
+				   <value>1</value>
+			   </equals>
+			   <equals>
+				   <property>controls/lighting/panel-left</property>
+				   <value>1</value>
+			   </equals>
+		   </and>
+	   </condition>
+	   <emission>
+		   <red>	0.01</red>
+		   <green>	0.020</green>
+		   <blue>	0.025</blue>
+	   </emission>
+   </animation>
+
+   <animation>
+	   <type>material</type>
+	   <object-name>ChairLever</object-name>
+	   <object-name>ChairLever.001_1</object-name>
+	   <object-name>Circle.001</object-name>
+	   <object-name>Circle.003</object-name>
+	   <object-name>Circle.005</object-name>
+	   <object-name>Circle.006</object-name>
+	   <object-name>Circle.007</object-name>
+	   <object-name>Circle.010</object-name>
+	   <object-name>Circle.011</object-name>
+	   <object-name>Circle.013</object-name>
+	   <object-name>Cockpit</object-name>
+	   <object-name>EmGearsock</object-name>
+	   <object-name>FireExt</object-name>
+	   <object-name>FireExtBut</object-name>
+	   <object-name>FlapLev</object-name>
+	   <object-name>FuseBox</object-name>
+	   <object-name>GearLev</object-name>
+	   <object-name>Guards</object-name>
+	   <object-name>Holders</object-name>
+	   <object-name>Horn</object-name>
+	   <object-name>ManGear</object-name>
+	   <object-name>MapHolder</object-name>
+	   <object-name>MaskSocket</object-name>
+	   <object-name>MixLev</object-name>
+	   <object-name>Primer</object-name>
+	   <object-name>RadLev</object-name>
+	   <object-name>oxytank</object-name>
+	   <object-name>Seat</object-name>
+	   <object-name>SeatAxle</object-name>
+	   <object-name>Stair</object-name>
+	   <object-name>Throttle</object-name>
+	   <condition>
+		   <or>
+			   <equals>
+				   <property>controls/lighting/panel-right</property>
+				   <value>1</value>
+			   </equals>
+			   <equals>
+				   <property>controls/lighting/panel-left</property>
+				   <value>1</value>
+			   </equals>
+		   </or>
+	   </condition>
+	   <emission>
+		   <red>	0.008</red>
+		   <green>	0.010</green>
+		   <blue>	0.012</blue>
+	   </emission>
+   </animation>
+
+   <animation>
+	   <type>material</type>
+	   <object-name>GearSelect</object-name>
+	   <object-name>GearEmergRel</object-name>
+	   <object-name>GearSafetyKnob</object-name>
+	   <object-name>GunSelect</object-name>
+	   <object-name>MGSelect</object-name>
+	   <object-name>Stick</object-name>
+	   <object-name>StickTrigger</object-name>
+	   <object-name>ThrottleRod</object-name>
+	   <object-name>MixRod</object-name>
+	   <object-name>Pipes</object-name>
+	   <object-name>Pipes.001</object-name>
+	   <object-name>PipesOxy</object-name>
+	   <shininess>64</shininess>
+   </animation>
+
+   <animation>
+	   <type>material</type>
+	   <object-name>FireExtBut</object-name>
+	   <object-name>GearEmergRel</object-name>
+	   <object-name>GearSafetyKnob</object-name>
+	   <object-name>GunSelectSw</object-name>
+	   <object-name>MGSelectSw</object-name>
+		<shininess>96</shininess>
+   </animation>
+
+   <effect>
+	   <inherits-from>Aircraft/IAR80/Models/Effects/iar80_alu_internal</inherits-from>
+	   <object-name>ChairLever</object-name>
+	   <object-name>ChairLever.001_1</object-name>
+	   <object-name>Circle.001</object-name>
+	   <object-name>Circle.003</object-name>
+	   <object-name>Circle.005</object-name>
+	   <object-name>Circle.006</object-name>
+	   <object-name>Circle.007</object-name>
+	   <object-name>Circle.008</object-name>
+	   <object-name>Circle.010</object-name>
+	   <object-name>Circle.011</object-name>
+	   <object-name>Circle.013</object-name>
+	   <object-name>Cockpit</object-name>
+	   <object-name>Cube.001</object-name>
+	   <object-name>EmGearsock</object-name>
+	   <object-name>FireExt</object-name>
+	   <object-name>FireExtBut</object-name>
+	   <object-name>FlapLev</object-name>
+	   <object-name>GearLev</object-name>
+	   <object-name>GearSelect</object-name>
+	   <object-name>GearEmergRel</object-name>
+	   <object-name>GearSafetyKnob</object-name>
+	   <object-name>Guards</object-name>
+	   <object-name>GunSelect</object-name>
+	   <object-name>GunSelectSw</object-name>
+	   <object-name>Holders</object-name>
+	   <object-name>Horn</object-name>
+	   <object-name>LampiBord</object-name>
+	   <object-name>ManGear</object-name>
+	   <object-name>MapHolder</object-name>
+	   <object-name>MaskSocket</object-name>
+	   <object-name>MGSelect</object-name>
+	   <object-name>MGSelectSw</object-name>
+	   <object-name>MixLev</object-name>
+	   <object-name>Primer</object-name>
+	   <object-name>RadLev</object-name>
+	   <object-name>oxytank</object-name>
+	   <object-name>Seat</object-name>
+	   <object-name>SeatAxle</object-name>
+	   <object-name>SightStand</object-name>
+	   <object-name>Stair</object-name>
+	   <object-name>Stick</object-name>
+	   <object-name>StickTrigger</object-name>
+	   <object-name>Throttle</object-name>
+	   <object-name>ThrottleRod</object-name>
+	   <object-name>TrimWheel</object-name>
+	   <object-name>MixRod</object-name>
+	   <object-name>Pipes</object-name>
+	   <object-name>Pipes.001</object-name>
+	   <object-name>PipesOxy</object-name>
+	   <object-name>wiring</object-name>
+   </effect>
+
+   <effect>
+	   <inherits-from>Aircraft/IAR80/Models/Effects/iar80_opaque</inherits-from>
+	   <object-name>Dash_L</object-name>
+	   <object-name>Dash_R</object-name>
+	   <object-name>Dash_C</object-name>
+	   <object-name>Headrest</object-name>
+	   <object-name>Photo</object-name>
+   </effect>
+
+<!--LOD-->
+<!--	<animation>
+		<type>range</type>
+		<min-m> 0</min-m>
+		<max-m>30</max-m>
+	</animation>-->
+
+</PropertyList>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name type="string">Hawks of Romania (Romanian AirClub)</name>
+				<index type="int">1</index>
+				<texture>Liveries/rohawks.dds</texture>
+				<shininess type="float">128</shininess>
+				<reflection-correction type="string">-0.02</reflection-correction>
+				<reflection-enabled type="int">1</reflection-enabled>
+				<reflection-fresnel type="float">-0.2</reflection-fresnel>
+				<reflection-noise type="float">0.05</reflection-noise>
+				<ambient-correction type="float">0.0</ambient-correction>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

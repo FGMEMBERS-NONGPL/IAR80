@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <path>prop-pitch-switch.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Switch</object-name>
+		<property>controls/engines/engine[0]/propeller-pitch</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep> 25</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-25</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-0.04</x-m>
+			<y-m>0</y-m>
+			<z-m>0.01</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Switch</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/propeller-pitch</property>
+				<step>0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/engine[0]/propeller-pitch</property>
+				<step>-0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+	</animation>
+
+	<effect>
+		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_opaque</inherits-from>
+		<object-name>Cube_1</object-name>
+	</effect>
+
+	<!-- LIGHTING -->
+	<animation>
+		<type>material</type>
+		<object-name>Cube_1</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+		<emission>
+			<red>0.1</red>
+			<green>0.3</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Cube_1</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>controls/lighting/panel-right</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/lighting/panel-left</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+		<emission>
+			<red>0.05</red>
+			<green>0.15</green>
+			<blue>0.125</blue>
+		</emission>
+	</animation>
+
+	<!--    LABEL TEXT activated by hotspots -->
+	<text>
+		<name>LabelText</name>
+		<type type="string">literal</type>
+		<text type="string">Propeller Pitch Control</text>
+		<draw-text type="bool">true</draw-text>
+		<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+		<axis-alignment>yz-plane</axis-alignment>
+		<max-height>0.2</max-height>
+		<max-width>0.07</max-width>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+		<alignment>center-center</alignment>
+		<offsets>
+			<x-m> 0.01</x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> 0.01</z-m>
+		</offsets>
+	</text>
+
+	<animation>
+		<type>material</type>
+		<object-name>LabelText</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>0.8</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LabelText</object-name>
+		<condition>
+			<property>/sim/panel-hotspots</property>
+		</condition>
+	</animation>
+
+</PropertyList>

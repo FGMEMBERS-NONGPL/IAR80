@@ -1,0 +1,56 @@
+<!--************************************************************************
+      iar80
+      2010 Emilian Huminiuc
+    ************************************************************************ -->
+<PropertyList include="IAR80-base.xml">
+
+	<sim>
+		<description>IAR 80A (YASim FDM)</description>
+		<flight-model>yasim</flight-model>
+		<aero>IAR80-yasim</aero>
+		<author>Emilian Huminiuc</author>
+		<status>advanced production</status>
+		<version>1.11</version>
+		<rating>
+			<FDM type="int">4</FDM>
+			<systems type="int">4</systems>
+			<cockpit type="int">5</cockpit>
+			<model type="int">5</model>
+		</rating>
+		<panel>
+		    <visibility>false</visibility>
+		</panel>
+		<multiplay>
+			<generic>
+				<int n="0" alias="/sim/failure-manager/engines/engine[0]/rev-strain"/>
+				<int n="1" alias="/sim/failure-manager/engines/engine[0]/seize-strain"/>
+				<int n="10" alias="/engines/engine[0]/cranking"/>
+				<int n="11" alias="/engines/engine[0]/running"/>
+				<int n="12" alias="/gear/gear[0]/wow"/>
+				<int n="13" alias="/gear/gear[1]/wow"/>
+				<int n="14" alias="/sim/failure-manager/controls/flight/aileron/serviceable"/>
+				<int n="15" alias="/sim/failure-manager/controls/flight/elevator/serviceable"/>
+				<int n="16" alias="/sim/failure-manager/controls/flight/rudder/serviceable"/>
+				<int n="17" alias="/sim/failure-manager/propeller/bent"/>
+
+
+				<float n="0" alias="/controls/canopy/position-norm"/>
+				<float n="1" alias="/controls/engines/engine[0]/cowl-flaps-norm"/>
+				<float n="2" alias="/controls/engines/engine[0]/mixture"/>
+				<float n="3" alias="/controls/engines/engine[0]/propeller-pitch"/>
+				<float n="4" alias="/engines/engine[0]/mp-osi"/>
+				<float n="5" alias="/gear/gear[0]/rollspeed-ms"/>
+				<float n="6" alias="/gear/gear[1]/rollspeed-ms"/>
+				<float n="7" alias="/orientation/alpha-deg"/>
+				<float n="8" alias="/systems/electrical/outputs/nav-lights"/>
+				<float n="9" alias="/velocities/airspeed-kt"/>
+				<float n="10" alias="/velocities/speed-down-fps"/>
+			</generic>
+		</multiplay>
+	</sim>
+	<nasal>
+		<IAR80>
+			<file>Aircraft/IAR80/Nasal/engine_management.nas</file>
+		</IAR80>
+	</nasal>
+</PropertyList>

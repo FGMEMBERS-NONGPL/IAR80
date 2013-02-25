@@ -1,0 +1,26 @@
+EXTERNAL MODEL:
+  -damage model for wings
+  -AI MODEL
+
+INTERNAL MODEL:
+  -map ;)
+
+
+INTERNAL TEXTURE:
+  -general internal textures (98% done)
+
+NASAL:
+    -tweaks on the damage and hidraulic systems
+    -fix missing var keywords in iar80.nas jwarbirds.nas electrical.nas (viewpoint.nas fixed)
+
+SYSTEMS:
+  -customize the electrical system (partial)
+
+SOUND:
+  -fix sounds ;)
+
+FDM:
+  -more tweaks for the fdm
+
+DOC:
+  -documentation, both airplane (history, technical data) and flight manual.

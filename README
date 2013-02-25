@@ -1,0 +1,122 @@
+Hello, and thank you for flying this aircraft.
+I can only hope that it meets your expectations :).
+
+###########################################################################################################
+This is the first "stable" release, as I consider I have implemented enough functions and features to the aircraft
+for it to get that status.
+
+Please read the AUTHORS file for credit
+to people whose code I used/inspired from in developing this aircraft.
+
+Also PLEASE read the TODO file to get a rough impression of things
+that are currently missing or poorly implemented.
+
+You'll find a quick cockpit reference in the doc folder as some instruments are not that obvious,
+or are marked in Romanian/German
+and some of the levers never had any labels to identify them.
+
+############################################################################################################
+############################################################################################################
+QUICK AND DIRTY START-up AND TAKEOFF GUIDE:
+
+WARNING:
+	Throttle is reversed in this version, as it was on the original planes. (Helicopter pilots may rejoice :P)
+  Keep Oil temperature below 120 (the engine will start choking and will eventualy seize).
+  Keep Revs below 2800, except for take-off andemergency situations. (the engine will start choking and will eventualy stop).
+  There is increased wear over 3000 revs.
+  Keep boost pressure below 950, except for short time in take-off/emergenecy situations.
+  Also as an indicator of pronounced engine wear, dark smoke will come out of the exhaust.
+
+
+START-up:
+
+1:	turn master switch on (the big hexagonal button over the pilot's right shoulder).
+2:	set mixture to rich (lever at forward position).
+3:	set some throttle.
+4:	prime 6-9 times.
+5:	set prop-pitch at about half.
+6:	set magnetos to M1+2.
+7:	open the cowl-flaps ("r" key).
+8:	engage starter button until oil-pressure (the left half, marked M, on the combined oil-fuel pressure gauge) starts to increase.
+
+* If it doesn't start.. check that the fuel pressure rises when engaging starter, if it doesn't prime it some more.. :)
+
+WARM-up:
+1.	set prop-pitch for minimum revs (towards the rear)
+2.	add some throttle until boost pressure reaches ~400 (engine rpm will stabilise at about 1450-1500)
+3.	wait until oil pressure gets over 1 and oil-temp reaches about 60
+
+TAXI:
+1:	set prop pitch towards half.
+2:	adjust the seat position in order to see more in front of the aircraft.
+2:	you have to use the differential brakes, as there was just a tail-skid.
+
+TAKE OFF:
+a:	adjust the seat height to the minimum.
+b: 	close canopy.
+1:	set prop pitch so that the pitch indicator forms a small V around 12 'o clock.
+2: 	release brakes and be prepared to correct the aircraft's tendency to yaw to the right
+			      (either by braking (at low speeds) or by using opposite rudder).
+3:	set throttle to have about 950-1000 boost pressure.
+4: 	maintain a little back pressure on the stick until the tail lifts off the ground.
+5: 	maintain little back pressure (just enough to keep the plane level)
+		until about 150-160km/h when the plane should take off by itself.
+6: 	raise gear.
+
+SHORT FIELD TAKE OFF:
+On short fields the T/O procedure differs a bit. You need to set flaps to position 2, then hold
+the brakes untill the engine revs up, with throttle set for ~1000 boost pressure.
+Only after the engine has reached ~3000RPM release the brakes.
+
+
+CRUISE SETTING:
+1:	set prop pitch so that the needles of the indicator form a V around the 11:05 position.
+2:	set mixture lever at about the apex of the bend in the lever guard. (~0.6 - 0.7 mixture).
+3:	cowl flaps at position 2/8.
+
+LANDING:
+
+1:	reduce throttle.
+2:	open cowl flaps.
+3:	at about 300 km/h start extending full flaps.
+4:	below 250 km/h extend gear.
+5:	touchdown at 150 km/h.
+6:	keep back pressure on the stick to keep the tail down and apply gentle pressure on the brakes.
+
+EMERGENCY:
+    If you lose the engine during flight the hydraulic system loses presurisation making it inoperable.
+    Although flaps and brakes become inoperable there is an emergency landing gear deployment procedure that you can use:
+1:	set the gear safety knob to the safe position
+2:	check the air pressure gauge
+3:	there needs to be enough air pressure for gear deployment (>70)
+4:	if air pressure is too low, pump using the manual pump on the right of the cockpit
+5:	check airspeed below 250 kph.
+6:	release the gear emergency lever on your left side.
+7:	check gear down and locked as indicated by the gear indicator.
+
+LIMITS:
+1:	Maximum flap extension airspeed - 300 kph (if exceded flaps jam, can be reset by the failure manager)
+2: 	Maximum gear extension airspeed - 250 kph (if exceded gear will jam, can be reset by the failure manager)
+3:	Vne 750 kph IAS. (if exceded aileron/elevator/rudder will tear off, depending on their position, can be reset by the failure manager)
+4:	Maximum g-load - 7G. (if exceded the wing will bend, resulting in bad aerodinamic performance, can be reset by the IAR80 menu)
+5:	Maximum negative g-load - 4G.(if exceded same as #4 above)
+
+GUNS AND MG-s ARMING:
+By default the weapons are not armed. If you desire you might set their corresponding switches to your pleasure.
+
+
+
+############################################################################################################
+############################################################################################################
+
+
+INSTALATION:
+extract this folder to your $FG_ROOT/Aircraft/ directory, (preserving paths) ie:
+
+ C:\Program Files\FGFS\Data\Aircraft\ (on M$ Windows)
+
+ /usr/share/games/FlightGear/Aircraft/ (on Linux)
+
+#############################################################################################################
+
+Please enjoy.(feedback wanted)

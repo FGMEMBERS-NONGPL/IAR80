@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<electrical>
+		<name>electrical</name>
+		<number>0</number>
+		<path>Aircraft/IAR80/Systems/IAR80-electrical.xml</path>
+	</electrical>
+
+	<!--  
+	<instrumentation>
+		<name>instrumentation</name>
+		<number>0</number>
+		<path>Aircraft/IAR80/Systems/IAR80-instrumentation.xml</path>
+	</instrumentation>
+	-->
+
+	<pitot>
+		<name>pitot</name>
+		<number>0</number>
+	</pitot>
+
+	<static>
+		<name>static</name>
+		<number>0</number>
+		<tau>1</tau>
+	</static>
+
+	<vacuum>
+		<name>vacuum</name>
+		<number>0</number>
+		<rpm>/engines/engine[0]/rpm</rpm>
+		<scale>1.0</scale>
+	</vacuum>
+
+</PropertyList>
