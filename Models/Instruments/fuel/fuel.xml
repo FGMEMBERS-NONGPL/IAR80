@@ -48,6 +48,20 @@
 		</axis>
 	</animation>
 
+	<animation>
+		<object-name>Lens</object-name>
+		<type>pick</type>
+			<hovered>
+				<binding>
+					<command>set-tooltip</command>
+					<tooltip-id>fuel_level</tooltip-id>
+					<label>Fuel level: %3d gal</label>
+					<property>consumables/fuel/fuel-level-gal_us</property>
+				</binding>
+			</hovered>
+	</animation>
+
+
 	<effect>
 		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
 		<object-name>Lens</object-name>

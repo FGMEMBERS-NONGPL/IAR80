@@ -1,445 +1,436 @@
 <!--
-    ************************************************************************
-    Intreprinderea Aeronautica Brasov
-    IAR80
-    2009-2010 Emilian Huminiuc - GNU-GPL v2
-    ************************************************************************
-  -->
+ IAR80-base.xml - Base shared properties for IAR-80 aircraft
+ Copyright (C) 2013 Emilian Huminiuc <emilianh@gmail.com>
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of the
+ License, or (at your option) any later version.
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+-->
 <PropertyList>
-
-	<sim>
-		<startup>
-			<splash-texture>Aircraft/IAR80/splash.png</splash-texture>
-		</startup>
-		<model>
-			<path>Aircraft/IAR80/Models/iar80.xml</path>
-			<livery>
-				  <name type="string">Default (Romanian Royal Air Force)</name>
-			</livery>
-		</model>
-		<fuel-fraction>1.0</fuel-fraction>
-		<virtual-cockpit archive="y">true</virtual-cockpit>
-		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
-		<failure-manager>
-			<engines>
-				<engine n="0">
-					<rev-strain type="int">1</rev-strain>
-					<seize-strain type="int">1</seize-strain>
-					<last-cough-r type="int">1</last-cough-r>
-					<last-cough-s type="int">1</last-cough-s>
-				</engine>
-			</engines>
-			<wing>
-				<bent type="int">0</bent>
-			</wing>
-			<propeller>
-				<bent type="bool">false</bent>
-			</propeller>
-		</failure-manager>
-		<sound>
-			<path>Aircraft/IAR80/IAR80-sound.xml</path>
-		</sound>
-		<systems>
-			<path>Aircraft/IAR80/Systems/IAR80-systems.xml</path>
-		        <electrical>
-		            <path></path>
-		        </electrical>
-				<property-rule>
-				  <path>Aircraft/IAR80/Systems/IAR80-propertyrules.xml</path>
-				</property-rule>
-		</systems>
-		<instrumentation>
-			<path>Aircraft/IAR80/Systems/IAR80-instrumentation.xml</path>
-		</instrumentation>
-		<rendering>
-			<redout>
-				<enabled type="bool">true</enabled>
-				<parameters>
-				  <blackout-complete-g type="double">7</blackout-complete-g>
-				  <blackout-onset-g type="double">4.5</blackout-onset-g>
-				  <redout-complete-g type="double">-4.5</redout-complete-g>
-				  <redout-onset-g type="double">-2</redout-onset-g>
-				</parameters>
-			</redout>
-			<camera-group>
-				<znear type="double">0.1</znear>
-			</camera-group>
-		</rendering>
-		<view n="0">
-			<internal archive="y">true</internal>
-			<config>
-				<x-offset-m archive="y" type="double">0.0</x-offset-m>
-				<y-offset-m archive="y" type="double">0.78</y-offset-m>
-				<z-offset-m archive="y" type="double">4.80</z-offset-m>
-				<pitch-offset-deg>-1.0</pitch-offset-deg>
-			</config>
-		</view>
-		<view n="1">
-			<config>
-				<z-offset-m archive="y" type="double">-10</z-offset-m>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-
-		</view>
-		<view n="2">
-			<config>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-		</view>
-		<view n="3">
-			<config>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-                </view>
-		<view n="4">
-			<config>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-                </view>
-		<view n="5">
-			<config>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-		</view>
-		<view n="6">
-			<config>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-		</view>
-		<view n="7">
-			<config>
-				<target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
-			</config>
-		</view>
-		<chase-distance-m>-15</chase-distance-m>
-		<hud>
-			<enable3d>false</enable3d>
-		</hud>
-		<help>
-			<title>IAR80</title>
-			<line></line>
-			<key>
-				<name>CTRL-D</name>
-				<desc>Open / Close Canopy</desc>
-			</key>
-			<key>
-				<name>r/R</name>
-				<desc>Open/Close Cowl-Flaps</desc>
-			</key>
-			<line></line>
-			<text>
-	WARNING: Throttle is reversed in this version, as it was on the original planes. (Helicopter pilots may rejoice :P)
-
-	All other Keybindings are the default ones
-	All switches are clickabe
-	All levers/sliders positions use click to increase and middle click to decrease.
-	There are labels on all the controls/instruments, just press ctrl+c to see them and the hotspots
-
-	QUICK AND DIRTY START-up AND TAKEOFF GUIDE:
-	For a description of all the gauges, switches and levers
-	check the iar80-quickreference.pdf in the IAR80/doc folder.
-
-	WARNING:
-	Keep Oil temperature below 120. (the engine will start choking and will eventualy seize).
-	Keep Revs below 2800, except for take-off andemergency situations. (the engine will start choking and will eventualy stop).
-	There is increased wear over 3000rpm.
-	Keep boost pressure bellow 950, except for short time in take-off/emergenecy situations.
-	Also as an indicator of pronounced engine wear, dark smoke will come out of the exhaust.
-
-
-	START-up:
-
-	1:	turn master switch on (the big hexagonal button over the pilot's right shoulder).
-	2:	set mixture to rich (lever at forward position).
-	3:	set some throttle.
-	4:	prime 6-7 times.
-	5:	set prop-pitch at about half.
-	6:	set magnetos to M1+2.
-	7:	open the cowl-flaps ("r" key).
-	8:	engage starter button until oil-pressure (the left half, marked M, on the combined oil-fuel pressure gauge) starts to increase.
-	9:	If wanted, turn the position-lights on.
-
-	* If it doesn't start.. check that the fuel pressure rises when engaging starter, if it doesn't prime it some more.. :)
-
-	WARM-up:
-	1.	set prop-pitch for minimum revs (towards the rear)
-	2.	add some throttle until boost pressure reaches ~400 (engine rpm will stabilise at about 1450-1500)
-	3.	wait until oil pressure gets over 1 and oil-temp reaches 60
-
-	TAXI:
-	1:	set prop pitch towards maximum (back half of the switch).
-	2:	adjust the seat position in order to see more in front of the aircraft.
-	3:	you have to use the differential brakes, as there was just a tail-skid.
-
-	TAKE OFF:
-	a:	adjust the seat height to the minimum.
-	b:	close canopy if you have not done so yet :).
-	1:	set prop pitch so that the pitch indicator forms a small V around 12 'o clock.
-	2:	release brakes and be prepared to correct the aircraft's tendency to yaw to the right
-			(either by braking (at low speeds) or by using opposite rudder).
-	3:	set throttle to have about 950-1000 boost pressure.
-	4:	maintain a little back pressure on the stick until the tail lifts off the ground.
-	5:	maintain little back pressure (just enough to keep the plane level)
-			until about 150-160km/h when the plane should take off by itself.
-	6: 	raise gear.
-
-	SHORT FIELD TAKE OFF:
-	On short fields the T/O procedure differs a bit. You need to set flaps to position 2, then hold
-	the brakes untill the engine revs up, with throttle set for ~1000 boost pressure.
-	Only after the engine has reached ~3000RPM release the brakes.
-
-	CRUISE SETTING:
-	1:	set prop pitch so that the needles of the indicator form a V around the 11:05 clock position.
-	2:	set mixture lever at about the apex of the bend in the lever guard. (~0.6 - 0.7 mixture).
-	3:	cowl flaps at position 2/8.
-
-	LANDING:
-
-	1:	reduce throttle.
-	2:	open cowl flaps.
-	3:	at about 300 km/h start extending full flaps.
-	4:	below 250 km/h extend gear.
-	5:	touchdown at 150 km/h.
-	6:	keep back pressure on the stick to keep the tail down and apply gentle pressure on the brakes.
-
-	EMERGENCY:
-	If you lose the engine during flight the hydraulic system loses presurisation making it inoperable.
-	Although flaps and brakes become inoperable there is an emergency landing gear deployment procedure that you can use:
-	1:	set the gear safety knob to the safe position
-	2:	check the air pressure gauge
-	3:	there needs to be enough air pressure for gear deployment (>70)
-	4:	if air pressure is too low, pump using the manual pump on the right of the cockpit
-	5:	check airspeed below 250 kph.
-	6:	release the gear emergency lever on your left side.
-	7:	check gear down and locked as indicated by the gear indicator.
-
-	LIMITS:
-	1:	Maximum flap extension airspeed - 300 kph (if exceded flaps jam, can be reset by the failure manager)
-	2:	Maximum gear extension airspeed - 250 kph (if exceded gear will jam, can be reset by the failure manager)
-	3:	Vne 750 kph IAS. (if exceded aileron/elevator/rudder will tear off, depending on thei position, can be reset by the failure manager)
-	4:	Maximum g-load - 7G. (if exceded the wing will bend, resulting in bad aerodinamic performance, can be reset by the IAR80 menu)
-	5:	Maximum negative g-load - 4G.(if exceded same as #4 above)
-
-	GUNS AND MG-s ARMING:
-	By default the weapons are not armed. If you desire you might set their corresponding switches to your pleasure.
-			</text>
-		</help>
-		<menubar>
-			<default>
-				<menu n="10">
-					<label>IAR-80</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>aircraft.livery.dialog.toggle()</script>
-						</binding>
-					</item>
-					<item>
-					    <label>Repair WING</label>
-					    <binding>
-						<command>nasal</command>
-						<script>IAR80.wing_reset()</script>
-					    </binding>
-					</item>
-					<item>
-					    <label>Easy Start</label>
-					    <binding>
-						<command>nasal</command>
-						<script>IAR80.easy_start()</script>
-					    </binding>
-					</item>
-				</menu>
-			</default>
-		</menubar>
-		<multiplay>
-			<generic>
-				<string n="9" type="string"/>
-				<string n="10" type="bool"/>
-				<string n="11" type="bool"/>
-				<string n="12" type="bool"/>
-				<string n="13" type="bool"/>
-				<string n="14" type="bool"/>
-				<string n="15" type="bool"/>
-				<string n="16" type="bool"/>
-				<string n="17" type="bool"/>
-			</generic>
-		</multiplay>
-		<submodels>
-			<serviceable type="bool">1</serviceable>
-			<path>Aircraft/IAR80/IAR80-submodels.xml</path>
-		</submodels>
-	</sim>
-	<consumables>
-		<fuel>
-			<tank n="0">
-				<level-gal_us>30</level-gal_us>
-				<selected type="bool">false</selected>
-				<empty type="bool">false</empty>
-				<density-ppg type="double" write="n">6.03</density-ppg>
-			</tank>
-			<tank n="1">
-				<level-gal_us>55</level-gal_us>
-				<selected type="bool">false</selected>
-				<empty type="bool">false</empty>
-				<density-ppg type="double" write="n">6.03</density-ppg>
-			</tank>
-			<fuel-level-gal_us type="float">85</fuel-level-gal_us>
-		</fuel>
-	</consumables>
-	<engines>
-		<engine n="0">
-			<running type="bool">0</running>
-			<rpm type="float">0</rpm>
-			<fuel-flow-gph type="float">0</fuel-flow-gph>
-			<out-of-fuel type="bool">true</out-of-fuel>
-			<oil-press type="float">0.0</oil-press>
-			<oil-visc type = "float">0.1</oil-visc>
-			<overheat type="int">0</overheat>
-		</engine>
-	</engines>
-	<instrumentation>
-		<magnetic-compass>
-			<correction-deg type="float">0</correction-deg>
-			<ring-heading-deg type="float">0</ring-heading-deg>
-		</magnetic-compass>
-		<clock>
-			<ring-set type="float">0</ring-set>
-		</clock>
-		<IOR-sight>
-			<range type="int">3</range>
-			<base type="int">3</base>
-		</IOR-sight>
-	</instrumentation>
-	<controls>
-		<engines>
-			<engine n="0">
-				<propeller-feather type="bool">false</propeller-feather>
-				<propeller-pitch type="double">0.0</propeller-pitch>
-				<boost type="bool">true</boost>
-				<cutoff type="bool">false</cutoff>
-				<cowl-flaps-norm type="double">0.0</cowl-flaps-norm>
-				<mixture type="double">0</mixture>
-				<throttle type="double">0</throttle>
-				<primer type="double">0</primer>
-				<primer-pos-norm type="double">0</primer-pos-norm>
-				<primer-pressed type="bool">false</primer-pressed>
-				<running type="bool">false</running>
-			</engine>
-		</engines>
-		<canopy>
-			<enabled type="bool">true</enabled>
-			<position-norm type="double">1.0</position-norm>
-			<opened type="double">1.0</opened>
-		</canopy>
-		<gear>
-			<brake-parking type="float">1</brake-parking>
-			<body-ground-friction type="float">1</body-ground-friction>
-			<gear-down-input type="bool">true</gear-down-input>
-		</gear>
-		<flight>
-			<aileron-trim type="double">-0.020</aileron-trim>
-			<rudder-trim type="double">0.015</rudder-trim>
-		</flight>
-		<seat>
-		    <setting type="int">0</setting>
-		    <setting_prev type="int">0</setting_prev>
-		</seat>
-		<switches>
-			<starter type="double">0.0</starter>
-			<starter-pos-norm type="double">0.0</starter-pos-norm>
-		</switches>
-	</controls>
-	<input>
-		<keyboard>
-			<key n="4">
-				<name>Ctrl-D</name>
-				<desc>Open/close canopy</desc>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/canopy/opened</property>
-				</binding>
-			</key>
-			<key n="82">
-				<name>R</name>
-				<desc>Decrease Cowl Flaps</desc>
-				<binding>
-					<command>property-adjust</command>
-					<property>controls/engines/engine[0]/cowl-flaps-norm</property>
-					<step type="double">-0.1</step>
-				</binding>
-			</key>
-			<key n="101">
-				<name>e</name>
-				<desc>Fire guns</desc>
-				<repeatable>false</repeatable>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/armament/trigger</property>
-					<value>1</value>
-				</binding>
-				<mod-up>
-					<binding>
-					    <command>property-assign</command>
-					    <property>controls/armament/trigger</property>
-					    <value>0</value>
-					</binding>
-				</mod-up>
-			</key>
-			<key n="114">
-				<name>r</name>
-				<desc>Increase Cowl Flaps</desc>
-				<binding>
-					<command>property-adjust</command>
-					<property>controls/engines/engine[0]/cowl-flaps-norm</property>
-					<step type="double">0.1</step>
-				</binding>
-			</key>
-			<key n="115">
-				<name>s</name>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/switches/starter</property>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>property-toggle</command>
-						<property>controls/switches/starter</property>
-					</binding>
-				</mod-up>
-			</key>
-		</keyboard>
-	</input>
-	<position>
-	    <altitude-agl-ft type="double">7.68</altitude-agl-ft>
-	</position>
-	<systems>
-	    <electrical>
-		<outputs>
-		    <nav-lights type="double">0</nav-lights>
-		</outputs>
-	    </electrical>
-	</systems>
-	<nasal>
-		<IAR80>
-		  <file>Aircraft/IAR80/Nasal/setup.nas</file>
-		  <file>Aircraft/IAR80/Nasal/jwarbirds.nas</file>
-		  <file>Aircraft/IAR80/Nasal/iar80.nas</file>
-		  <file>Aircraft/IAR80/Nasal/liveries.nas</file>
-		  <file>Aircraft/IAR80/Nasal/electrical.nas</file>
-		  <file>Aircraft/IAR80/Nasal/easy_start.nas</file>
-		  <file>Aircraft/IAR80/Nasal/smoothanim.nas</file>
-		  <file>Aircraft/IAR80/Nasal/input.nas</file>
-		  <file>Aircraft/IAR80/Nasal/viewpoint.nas</file>
-		  <file>Aircraft/IAR80/Nasal/hydraulics.nas</file>
-		  <file>Aircraft/IAR80/Nasal/weapons.nas</file>
-		  <file>Aircraft/IAR80/Nasal/failure.nas</file>
-		</IAR80>
-	</nasal>
-	<limits>
-		<mass-and-balance>
-			<maximum-takeoff-mass-lbs>4957</maximum-takeoff-mass-lbs>
-		</mass-and-balance>
-	</limits>
+    <sim>
+        <startup>
+            <splash-texture>Aircraft/IAR80/splash.png</splash-texture>
+        </startup>
+        <model>
+            <path>Aircraft/IAR80/Models/iar80.xml</path>
+<!-- 			<path>Aircraft/IAR80/Models/iar_80c_t3.obj</path> -->
+            <livery>
+                <name type="string">Default (Romanian Royal Air Force)</name>
+            </livery>
+        </model>
+        <fuel-fraction>1.0</fuel-fraction>
+        <virtual-cockpit archive="y">true</virtual-cockpit>
+        <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+        <failure-manager>
+            <engines>
+                <engine n="0">
+                    <rev-strain type="int">1</rev-strain>
+                    <seize-strain type="int">1</seize-strain>
+                    <last-cough-r type="int">1</last-cough-r>
+                    <last-cough-s type="int">1</last-cough-s>
+                </engine>
+            </engines>
+            <wing>
+                <bent type="int">0</bent>
+            </wing>
+            <propeller>
+                <bent type="bool">false</bent>
+            </propeller>
+        </failure-manager>
+        <sound>
+            <path>Aircraft/IAR80/IAR80-sound.xml</path>
+        </sound>
+        <systems>
+            <path>Aircraft/IAR80/Systems/IAR80-systems.xml</path>
+<!--            <electrical>
+                <path/>
+            </electrical>-->
+            <property-rule n="100">
+                <name>IAR80 Interpolation Rules</name>
+                <path>Aircraft/IAR80/Systems/IAR80-propertyrules.xml</path>
+            </property-rule>
+        </systems>
+        <instrumentation>
+            <path>Aircraft/IAR80/Systems/IAR80-instrumentation.xml</path>
+        </instrumentation>
+        <rendering>
+            <redout>
+                <enabled type="bool">true</enabled>
+                <parameters>
+                    <blackout-complete-g type="double">7</blackout-complete-g>
+                    <blackout-onset-g type="double">4.5</blackout-onset-g>
+                    <redout-complete-g type="double">-4.5</redout-complete-g>
+                    <redout-onset-g type="double">-2</redout-onset-g>
+                </parameters>
+            </redout>
+            <camera-group>
+                <znear type="double">0.1</znear>
+            </camera-group>
+        </rendering>
+        <view n="0">
+            <internal archive="y">true</internal>
+            <config>
+                <x-offset-m archive="y" type="double">0.0</x-offset-m>
+                <y-offset-m archive="y" type="double">0.78</y-offset-m>
+                <z-offset-m archive="y" type="double">4.80</z-offset-m>
+                <pitch-offset-deg>-1.0</pitch-offset-deg>
+            </config>
+        </view>
+        <view n="1">
+            <config>
+                <z-offset-m archive="y" type="double">-10</z-offset-m>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <view n="2">
+            <config>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <view n="3">
+            <config>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <view n="4">
+            <config>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <view n="5">
+            <config>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <view n="6">
+            <config>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <view n="7">
+            <config>
+                <target-z-offset-m archive="y" type="double">2.67</target-z-offset-m>
+            </config>
+        </view>
+        <chase-distance-m>-15</chase-distance-m>
+        <hud>
+            <enable3d>false</enable3d>
+        </hud>
+        <help>
+            <title>IAR80</title>
+            <line/>
+            <key>
+                <name>CTRL-D</name>
+                <desc>Open / Close Canopy</desc>
+            </key>
+            <key>
+                <name>r/R</name>
+                <desc>Open/Close Cowl-Flaps</desc>
+            </key>
+            <line/>
+            <text>
+    WARNING: Throttle is reversed in this version, as it was on the original planes. (Helicopter pilots may rejoice :P)
+    All other Keybindings are the default ones
+    All switches are clickabe
+    All levers/sliders positions use click to increase and middle click to decrease.
+    There are labels on all the controls/instruments, just press ctrl+c to see them and the hotspots
+    QUICK AND DIRTY START-up AND TAKEOFF GUIDE:
+    For a description of all the gauges, switches and levers
+    check the iar80-quickreference.pdf in the IAR80/doc folder.
+    WARNING:
+    Keep Oil temperature below 120. (the engine will start choking and will eventualy seize).
+    Keep Revs below 2800, except for take-off andemergency situations. (the engine will start choking and will eventualy stop).
+    There is increased wear over 3000rpm.
+    Keep boost pressure bellow 950, except for short time in take-off/emergenecy situations.
+    Also as an indicator of pronounced engine wear, dark smoke will come out of the exhaust.
+    START-up:
+    1:  turn master switch on (the big hexagonal button over the pilot's right shoulder).
+    2:  set mixture to rich (lever at forward position).
+    3:  set some throttle.
+    4:  prime 6-7 times.
+    5:  set prop-pitch at about half.
+    6:  set magnetos to M1+2.
+    7:  open the cowl-flaps (&quot;r&quot; key).
+    8:  engage starter button until oil-pressure (the left half, marked M, on the combined oil-fuel pressure gauge) starts to increase.
+    9:  If wanted, turn the position-lights on.
+    * If it doesn't start.. check that the fuel pressure rises when engaging starter, if it doesn't prime it some more.. :)
+    WARM-up:
+    1.  set prop-pitch for minimum revs (towards the rear)
+    2.  add some throttle until boost pressure reaches ~400 (engine rpm will stabilise at about 1450-1500)
+    3.  wait until oil pressure gets over 1 and oil-temp reaches 60
+    TAXI:
+    1:  set prop pitch towards maximum (back half of the switch).
+    2:  adjust the seat position in order to see more in front of the aircraft.
+    3:  you have to use the differential brakes, as there was just a tail-skid.
+    TAKE OFF:
+    a:  adjust the seat height to the minimum.
+    b:  close canopy if you have not done so yet :).
+    1:  set prop pitch so that the pitch indicator forms a small V around 12 'o clock.
+    2:  release brakes and be prepared to correct the aircraft's tendency to yaw to the right
+            (either by braking (at low speeds) or by using opposite rudder).
+    3:  set throttle to have about 950-1000 boost pressure.
+    4:  maintain a little back pressure on the stick until the tail lifts off the ground.
+    5:  maintain little back pressure (just enough to keep the plane level)
+            until about 150-160km/h when the plane should take off by itself.
+    6:  raise gear.
+    SHORT FIELD TAKE OFF:
+    On short fields the T/O procedure differs a bit. You need to set flaps to position 2, then hold
+    the brakes untill the engine revs up, with throttle set for ~1000 boost pressure.
+    Only after the engine has reached ~3000RPM release the brakes.
+    CRUISE SETTING:
+    1:  set prop pitch so that the needles of the indicator form a V around the 11:05 clock position.
+    2:  set mixture lever at about the apex of the bend in the lever guard. (~0.6 - 0.7 mixture).
+    3:  cowl flaps at position 2/8.
+    LANDING:
+    1:  reduce throttle.
+    2:  open cowl flaps.
+    3:  at about 300 km/h start extending full flaps.
+    4:  below 250 km/h extend gear.
+    5:  touchdown at 150 km/h.
+    6:  keep back pressure on the stick to keep the tail down and apply gentle pressure on the brakes.
+    EMERGENCY:
+    If you lose the engine during flight the hydraulic system loses presurisation making it inoperable.
+    Although flaps and brakes become inoperable there is an emergency landing gear deployment procedure that you can use:
+    1:  set the gear safety knob to the safe position
+    2:  check the air pressure gauge
+    3:  there needs to be enough air pressure for gear deployment (&gt;70)
+    4:  if air pressure is too low, pump using the manual pump on the right of the cockpit
+    5:  check airspeed below 250 kph.
+    6:  release the gear emergency lever on your left side.
+    7:  check gear down and locked as indicated by the gear indicator.
+    LIMITS:
+    1:  Maximum flap extension airspeed - 300 kph (if exceded flaps jam, can be reset by the failure manager)
+    2:  Maximum gear extension airspeed - 250 kph (if exceded gear will jam, can be reset by the failure manager)
+    3:  Vne 750 kph IAS. (if exceded aileron/elevator/rudder will tear off, depending on thei position, can be reset by the failure manager)
+    4:  Maximum g-load - 7G. (if exceded the wing will bend, resulting in bad aerodinamic performance, can be reset by the IAR80 menu)
+    5:  Maximum negative g-load - 4G.(if exceded same as #4 above)
+    GUNS AND MG-s ARMING:
+    By default the weapons are not armed. If you desire you might set their corresponding switches to your pleasure.
+            </text>
+        </help>
+        <menubar>
+            <default>
+                <menu n="10">
+                    <label>IAR-80</label>
+                    <enabled type="bool">true</enabled>
+                    <item>
+                        <label>Select Livery</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>aircraft.livery.dialog.toggle()</script>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Repair WING</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>IAR80.wing_reset()</script>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Easy Start</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>IAR80.easy_start()</script>
+                        </binding>
+                    </item>
+                </menu>
+            </default>
+        </menubar>
+        <multiplay>
+            <generic>
+                <string n="9" type="string"/>
+                <string n="10" type="bool"/>
+                <string n="11" type="bool"/>
+                <string n="12" type="bool"/>
+                <string n="13" type="bool"/>
+                <string n="14" type="bool"/>
+                <string n="15" type="bool"/>
+                <string n="16" type="bool"/>
+                <string n="17" type="bool"/>
+            </generic>
+        </multiplay>
+        <submodels>
+            <serviceable type="bool">1</serviceable>
+            <path>Aircraft/IAR80/IAR80-submodels.xml</path>
+        </submodels>
+    </sim>
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <level-gal_us>30</level-gal_us>
+                <selected type="bool">false</selected>
+                <empty type="bool">false</empty>
+                <density-ppg type="double" write="n">6.03</density-ppg>
+            </tank>
+            <tank n="1">
+                <level-gal_us>55</level-gal_us>
+                <selected type="bool">false</selected>
+                <empty type="bool">false</empty>
+                <density-ppg type="double" write="n">6.03</density-ppg>
+            </tank>
+            <fuel-level-gal_us type="float">85</fuel-level-gal_us>
+        </fuel>
+    </consumables>
+    <engines>
+        <engine n="0">
+            <running type="bool">0</running>
+            <rpm type="float">0</rpm>
+            <fuel-flow-gph type="float">0</fuel-flow-gph>
+            <out-of-fuel type="bool">true</out-of-fuel>
+            <oil-press type="float">0.0</oil-press>
+            <oil-visc type="float">0.1</oil-visc>
+            <overheat type="int">0</overheat>
+        </engine>
+    </engines>
+    <instrumentation>
+        <magnetic-compass>
+            <correction-deg type="float">0</correction-deg>
+            <ring-heading-deg type="float">0</ring-heading-deg>
+        </magnetic-compass>
+        <clock>
+            <ring-set type="float">0</ring-set>
+        </clock>
+        <IOR-sight>
+            <range type="int">3</range>
+            <base type="int">3</base>
+        </IOR-sight>
+    </instrumentation>
+    <controls>
+        <engines>
+            <engine n="0">
+                <propeller-feather type="bool">false</propeller-feather>
+                <propeller-pitch type="double">0.0</propeller-pitch>
+                <boost type="bool">true</boost>
+                <cutoff type="bool">false</cutoff>
+                <cowl-flaps-norm type="double">0.0</cowl-flaps-norm>
+                <mixture type="double">0</mixture>
+                <throttle type="double">0</throttle>
+                <primer type="double">0</primer>
+                <primer-pos-norm type="double">0</primer-pos-norm>
+                <primer-pressed type="bool">false</primer-pressed>
+                <running type="bool">false</running>
+            </engine>
+        </engines>
+        <canopy>
+            <enabled type="bool">true</enabled>
+            <position-norm type="double">1.0</position-norm>
+            <opened type="double">1.0</opened>
+        </canopy>
+        <gear>
+            <brake-parking type="float">1</brake-parking>
+            <body-ground-friction type="float">1</body-ground-friction>
+            <gear-down-input type="bool">true</gear-down-input>
+        </gear>
+        <flight>
+            <aileron-trim type="double">-0.020</aileron-trim>
+            <rudder-trim type="double">0.015</rudder-trim>
+        </flight>
+        <seat>
+            <setting type="int">0</setting>
+            <setting_prev type="int">0</setting_prev>
+        </seat>
+        <switches>
+            <starter type="double">0.0</starter>
+            <starter-pos-norm type="double">0.0</starter-pos-norm>
+        </switches>
+    </controls>
+    <input>
+        <keyboard>
+            <key n="4">
+                <name>Ctrl-D</name>
+                <desc>Open/close canopy</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/canopy/opened</property>
+                </binding>
+            </key>
+            <key n="82">
+                <name>R</name>
+                <desc>Decrease Cowl Flaps</desc>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+                    <step type="double">-0.1</step>
+                </binding>
+            </key>
+            <key n="101">
+                <name>e</name>
+                <desc>Fire guns</desc>
+                <repeatable>false</repeatable>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/armament/trigger</property>
+                    <value>1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>controls/armament/trigger</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
+            </key>
+            <key n="114">
+                <name>r</name>
+                <desc>Increase Cowl Flaps</desc>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+                    <step type="double">0.1</step>
+                </binding>
+            </key>
+            <key n="115">
+                <name>s</name>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/switches/starter</property>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>controls/switches/starter</property>
+                    </binding>
+                </mod-up>
+            </key>
+        </keyboard>
+    </input>
+    <position>
+        <altitude-agl-ft type="double">7.68</altitude-agl-ft>
+    </position>
+    <systems>
+        <electrical>
+            <outputs>
+                <nav-lights type="double">0</nav-lights>
+            </outputs>
+        </electrical>
+    </systems>
+    <nasal>
+        <IAR80>
+            <file>Aircraft/IAR80/Nasal/setup.nas</file>
+            <file>Aircraft/IAR80/Nasal/jwarbirds.nas</file>
+            <file>Aircraft/IAR80/Nasal/iar80.nas</file>
+            <file>Aircraft/IAR80/Nasal/liveries.nas</file>
+            <file>Aircraft/IAR80/Nasal/electrical.nas</file>
+            <file>Aircraft/IAR80/Nasal/easy_start.nas</file>
+            <file>Aircraft/IAR80/Nasal/smoothanim.nas</file>
+            <file>Aircraft/IAR80/Nasal/input.nas</file>
+            <file>Aircraft/IAR80/Nasal/viewpoint.nas</file>
+            <file>Aircraft/IAR80/Nasal/hydraulics.nas</file>
+            <file>Aircraft/IAR80/Nasal/weapons.nas</file>
+            <file>Aircraft/IAR80/Nasal/failure.nas</file>
+        </IAR80>
+    </nasal>
+    <limits>
+        <mass-and-balance>
+            <maximum-takeoff-mass-lbs>4957</maximum-takeoff-mass-lbs>
+        </mass-and-balance>
+    </limits>
 </PropertyList>

@@ -1,19 +1,19 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "Grey" rgb 0.665932 0.725688 0.732669 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 28 trans 0
+MATERIAL "Grey" rgb 0.665932 0.725688 0.732669 amb 1.0 1.0 1.0 emis 0 0 0 spec 1 1 1 shi 28 trans 0
 MATERIAL "Black" rgb 0 0 0 amb 0.2 0.2 0.2 emis 0 0 0 spec 1 1 1 shi 9 trans 0
 MATERIAL "CockpitTexture" rgb 0.75 0.775 0.78 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 32 trans 0
-MATERIAL "Metal" rgb 0.7 0.74 0.75 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.869579 0.95046 0.955813 shi 19 trans 0
+MATERIAL "Metal" rgb 0.7 0.74 0.75 amb 1 1 1 emis 0 0 0 spec 0.869579 0.95046 0.955813 shi 19 trans 0
 MATERIAL "Engine.blk" rgb 0.191068 0.191068 0.191068 amb 0.1 0.1 0.1 emis 0 0 0 spec 0.5 0.5 0.5 shi 12 trans 0
-MATERIAL "Livery" rgb 0.78 0.78 0.78 amb 0.3 0.3 0.3 emis 0 0 0 spec 0.84 0.92 0.92 shi 48 trans 0
+MATERIAL "Livery" rgb 0.78 0.78 0.78 amb 1 1 1 emis 0 0 0 spec 0.84 0.92 0.92 shi 48 trans 0
 MATERIAL "Red" rgb 0.63 0.01 0.01 amb 1 1 1 emis 0 0 0 spec 0.996598 0.883325 0.727757 shi 16 trans 0
-MATERIAL "Blue" rgb 0.71 0.79 0.85 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.813113 0.963486 0.983248 shi 16 trans 0
+MATERIAL "Blue" rgb 0.71 0.79 0.85 amb 1 1 1 emis 0 0 0 spec 0.813113 0.963486 0.983248 shi 16 trans 0
 MATERIAL "Red.001" rgb 0.63 0.01 0.01 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.996598 0.883325 0.727757 shi 16 trans 0
 MATERIAL "Labels" rgb 0.191068 0.191068 0.191068 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 12 trans 0
-MATERIAL "Texture" rgb 0 0 0 amb 0.85 0.85 0.85 emis 0 0 0 spec 0.5 0.5 0.5 shi 32 trans 0
+MATERIAL "Texture" rgb 0 0 0 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 32 trans 0
 MATERIAL "Engine.blk.001" rgb 0.188235 0.188235 0.188235 amb 0.1 0.1 0.1 emis 0 0 0 spec 0.498039 0.498039 0.498039 shi 12 trans 0
 MATERIAL "blk.001" rgb 0.167979 0.125669 0.125669 amb 0.2 0.2 0.2 emis 0 0 0 spec 0.5 0.5 0.5 shi 56 trans 0
-MATERIAL "WIRE" rgb 0.09635 0.202381 0.287205 amb 0.206648 0.206648 0.206648 emis 0 0 0 spec 1 1 1 shi 46 trans 0
+MATERIAL "WIRE" rgb 0.09635 0.202381 0.287205 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 46 trans 0
 OBJECT world
 kids 83
 OBJECT poly

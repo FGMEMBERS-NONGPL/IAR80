@@ -52,6 +52,20 @@
 		</axis>
 	</animation>
 
+	<animation>
+		<object-name>Lens</object-name>
+		<type>pick</type>
+			<hovered>
+				<binding>
+					<command>set-tooltip</command>
+					<tooltip-id>Rpm</tooltip-id>
+					<label>Tachometer: %4drpm</label>
+					<measure-text>Tachometer: 9999rpm</measure-text>
+					<property>engines/engine/rpm</property>
+				</binding>
+			</hovered>
+	</animation>
+
 	<effect>
 		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
 		<object-name>Lens</object-name>
@@ -62,10 +76,10 @@
 		<object-name>Cylinder_1</object-name>
 	</effect>
 
- <effect>
-   <inherits-from>Effects/model-transparent</inherits-from>
-   <object-name>Cylinder.001</object-name>
- </effect>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Cylinder.001</object-name>
+	</effect>
 
 	<animation>
 		<type>material</type>

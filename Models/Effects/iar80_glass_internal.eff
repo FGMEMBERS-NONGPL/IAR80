@@ -6,7 +6,7 @@
 	Switches automaticaly to an effect similar to model-transparent when Rembrandt is enabled.
 -->
 <PropertyList>
-	<name>iar80_glass_internal_u</name>
+	<name>iar80_glass_internal</name>
 		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass</inherits-from>
 		<parameters>
 			<normalmap-enabled type="int">0</normalmap-enabled>
@@ -22,8 +22,10 @@
 					<negative-z>Aircraft/IAR80/Models/Effects/Textures/Cubemap/Interior/down.dds</negative-z>
 				</images>
 			</texture>
-			<reflection-fresnel type="float">0.25</reflection-fresnel>
-			<reflection-correction type="float">0.4</reflection-correction>
+			<reflection-fresnel type="float">0</reflection-fresnel>
+			<reflection-correction type="float">1</reflection-correction>
+			<reflection-rainbow type="float">1</reflection-rainbow>
+			<reflection-noise type="float">1.0</reflection-noise>
 			<reflection-dynamic type="int">0</reflection-dynamic>
 			<ambient-correction type="float">0.1</ambient-correction>
 		</parameters>

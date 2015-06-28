@@ -34,6 +34,19 @@
     </axis>
   </animation>
 
+  <animation>
+	  <object-name>Lens</object-name>
+	  <type>pick</type>
+		  <hovered>
+			  <binding>
+				  <command>set-tooltip</command>
+				  <tooltip-id>IAS_kt</tooltip-id>
+				  <label>Airspeed: %3d KIAS</label>
+				  <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+			  </binding>
+		  </hovered>
+  </animation>
+
 	<effect>
 		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
 		<object-name>Lens</object-name>

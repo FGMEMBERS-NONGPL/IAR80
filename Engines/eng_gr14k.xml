@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+  File:     eng_gr14k.xml
+  Author:   Ron Jensen, Emilian Huminiuc
+
+  Inputs:
+    name:           eng_gr14k
+    type:           piston
+    power:          A bunch
+
+Oil consumption: 20 g/(kWh) (0.53 oz/(hph)) [wikipedia]
+
+Oil consumption: 10gr/Hp hour [1]
+
+Omologation Altitude:  3200m [1]
+Boost pressure @3200m: 850 mmHg | 33.5 inHg [1]
+Nominal Power @3200m:  1000 Hp [1]
+Nominal prop Rpm:      1533 [1]
+Nominal engine Rpm:    2300
+Nominal power @0m:     880 Hp [1]
+Max allowed prop rpm:  2420 [1]
+Max Power @ cruise:    960Hp [1]
+
+Reference:
+[1] http://www.worldwar2.ro/forum/index.php?showtopic=4571&st=15#
+-->
+
+<piston_engine name="eng_gr14k">
+  <minmp unit="INHG">         12.0 </minmp>
+  <maxmp unit="INHG">         28.5 </maxmp>
+  <displacement unit="IN3"> 2400 </displacement>
+  <maxhp>        1140.00 </maxhp>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      400.0 </idlerpm>
+  <maxrpm>      3630.0 </maxrpm>
+
+  <sparkfaildrop>  0.1 </sparkfaildrop>
+  <volumetric-efficiency> 0.775 </volumetric-efficiency>
+<!-- Optional items that affect engine performance -->
+  <!-- Defining <bsfc> over-rides the built-in horsepower calculations -->
+  <bsfc>              0.53 </bsfc>
+  <stroke unit="IN">  6.5  </stroke>
+  <bore unit="IN">    5.75 </bore>
+  <cylinders>         14.0  </cylinders>
+  <compression-ratio> 6.14 </compression-ratio>
+  <air-intake-impedance-factor>0.03</air-intake-impedance-factor>
+  <ram-air-factor>    1.3 </ram-air-factor>
+  <boost-loss-factor> 1.2 </boost-loss-factor>
+  <numboostspeeds>    1   </numboostspeeds>
+  <ratedboost1>       7.5   </ratedboost1>
+  <ratedpower1>       1140   </ratedpower1>
+  <ratedrpm1>         2800   </ratedrpm1>
+  <ratedaltitude1>    0 </ratedaltitude1>
+
+  <function name="propulsion/engine[#]/oil-burn-pps">
+    <min>
+      <product>
+        <property>propulsion/engine/power-hp</property>
+        <value>-0.00001 </value>
+      </product>
+      <value> 0. </value>
+    </min>
+  </function>
+
+</piston_engine>

@@ -317,6 +317,18 @@
 	</model>
 
 	<model>
+		<path>Aircraft/IAR80/Models/Fx/gun-tracer.xml</path>
+		<offsets>
+			<x-m> 1.808070</x-m>
+			<y-m> 1.965050</y-m>
+			<z-m>-0.196901</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 182.5</pitch-deg>
+			<heading-deg> 0.25</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
 		<path>Aircraft/IAR80/Models/Fx/mg-smoke.xml</path>
 		<offsets>
 			<x-m> 1.929080</x-m>
@@ -329,6 +341,18 @@
 	</model>
 
 	<model>
+		<path>Aircraft/IAR80/Models/Fx/mg-tracer.xml</path>
+		<offsets>
+			<x-m> 1.929080</x-m>
+			<y-m> 2.115010</y-m>
+			<z-m>-0.192938</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 182.5</pitch-deg>
+			<heading-deg> 0.25</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
 		<path>Aircraft/IAR80/Models/Fx/mg-smoke.xml</path>
 		<offsets>
 			<x-m> 1.920240</x-m>
@@ -337,6 +361,18 @@
 			<roll-deg>    0</roll-deg>
 			<pitch-deg> 180</pitch-deg>
 			<heading-deg> 0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/IAR80/Models/Fx/mg-tracer.xml</path>
+		<offsets>
+			<x-m> 1.920240</x-m>
+			<y-m> 2.684980</y-m>
+			<z-m>-0.163068</z-m>
+			<roll-deg>    0</roll-deg>
+			<pitch-deg> 182.5</pitch-deg>
+			<heading-deg> 0.25</heading-deg>
 		</offsets>
 	</model>
 

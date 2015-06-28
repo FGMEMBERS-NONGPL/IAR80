@@ -23,19 +23,28 @@
     </axis>
   </animation>
 
-  <animation>
-  <type>pick</type>
-  <object-name>Switch</object-name>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <interval-sec>0.1</interval-sec>
-     <binding>
-       <command>property-toggle</command>
-       <property>controls/lighting/panel-right-sw-press</property>
-     </binding>
-  </action>
-</animation>
+   <animation>
+	   <type>pick</type>
+	   <object-name>Switch</object-name>
+	   <hovered>
+		   <binding>
+			   <command>set-tooltip</command>
+			   <tooltip-id>panel_lights_r</tooltip-id>
+			   <label>Panel Lights R: %s</label>
+			   <mapping>on-off</mapping>
+			   <property>controls/lighting/panel-right-sw-pos</property>
+		   </binding>
+	   </hovered>
+	   <action>
+		   <button>0</button>
+		   <repeatable>false</repeatable>
+		   <interval-sec>0.1</interval-sec>
+		   <binding>
+			   <command>property-toggle</command>
+			   <property>controls/lighting/panel-right-sw-press</property>
+		   </binding>
+	   </action>
+   </animation>
 
    <!--    LABEL TEXT activated by hotspots -->
    <text>

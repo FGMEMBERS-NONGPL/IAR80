@@ -5,6 +5,7 @@
 <PropertyList>
 
 	<path>iar_80c.ac</path>
+<!-- 	<path>iar_80c_t3.obj</path> -->
 
 <!-- LIVERY SCRIPT -->
 	<nasal>
@@ -43,12 +44,13 @@
 
 <!-- PARTICLE EFFECTS -->
 	<model>
-		<path>Aircraft/IAR80/Models/fx.xml</path>
+		<path>Models/fx.xml</path>
 	</model>
 
 <!-- COCKPIT -->
 	<model>
-		<path>Aircraft/IAR80/Models/cockpit.xml</path>
+		<usage>interior</usage>
+		<path>Models/cockpit.xml</path>
 	</model>
 
 <!-- COWL FLAPS -->

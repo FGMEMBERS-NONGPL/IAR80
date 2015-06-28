@@ -30,6 +30,19 @@
     </axis>
   </animation>
 
+   <animation>
+	   <object-name>Lens</object-name>
+	   <type>pick</type>
+		   <hovered>
+			   <binding>
+				   <command>set-tooltip</command>
+				   <tooltip-id>oil_temp</tooltip-id>
+				   <label>Oil temp: %3d°C</label>
+				   <property>engines/engine/oil-temp-ind</property>
+			   </binding>
+		   </hovered>
+   </animation>
+
 	<effect>
 		<inherits-from>Aircraft/IAR80/Models/Effects/iar80_glass_internal</inherits-from>
 		<object-name>Lens</object-name>
