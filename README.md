@@ -1,5 +1,10 @@
-Hello, and thank you for flying this aircraft.
-I can only hope that it meets your expectations :).
+(c) 2011-2015 emilian huminiuc, emilianh(at)gmail(dot)com
+
+for license information see COPYING file
+
+
+	Hello, and thank you for flying this aircraft.
+	I can only hope that it meets your expectations :).
 
 ###########################################################################################################
 This is the first "stable" release, as I consider I have implemented enough functions and features to the aircraft
@@ -20,7 +25,7 @@ and some of the levers never had any labels to identify them.
 QUICK AND DIRTY START-up AND TAKEOFF GUIDE:
 
 WARNING:
-	Throttle is reversed in this version, as it was on the original planes. (Helicopter pilots may rejoice :P)
+  Throttle is reversed in this version, as it was on the original planes. (Helicopter pilots may rejoice :P)
   Keep Oil temperature below 120 (the engine will start choking and will eventualy seize).
   Keep Revs below 2800, except for take-off andemergency situations. (the engine will start choking and will eventualy stop).
   There is increased wear over 3000 revs.
