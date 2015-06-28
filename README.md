@@ -125,3 +125,9 @@ extract this folder to your $FG_ROOT/Aircraft/ directory, (preserving paths) ie:
 #############################################################################################################
 
 Please enjoy.(feedback wanted)
+
+	DISCLAIMER
+
+	"I.A.R." logo, I.A.R. and IAR-80 are properties of IAR Romania SA.
+	Emilian Huminiuc has no relationship with IAR Romania SA.
+	Use the mod at your own risk. The Author will not be taken responsible for losses or damages resulting from the use of this mod.
